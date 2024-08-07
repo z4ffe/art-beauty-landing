@@ -21,11 +21,13 @@ body {
 
 .header {
   display: flex;
-  width: 100%;
+  width: 120rem;
 }
 .header .header-wrapper {
+  position: relative;
   background-image: url("/assets/images/header-bg.png");
   padding: 0 16.25rem;
+  width: 120rem;
 }
 .header .header-wrapper .nav {
   display: flex;
@@ -39,7 +41,7 @@ body {
 }
 .header .header-wrapper .nav__info .about {
   font-size: 14px;
-  width: 170px;
+  width: 10.8125rem;
   color: #fff;
   line-height: 21.76px;
   font-weight: 500;
@@ -55,15 +57,33 @@ body {
   display: flex;
   gap: 2.25rem;
   padding-left: 14.0625rem;
+  z-index: 10;
 }
 .header .header-wrapper .nav .phone-number {
   display: flex;
   flex-direction: column;
-  padding-left: 34px;
+  margin-left: 40px;
   gap: 0.8125rem;
+  z-index: 10;
 }
-.header .header-wrapper .nav .phone-number span {
+.header .header-wrapper .nav .phone-number a {
   display: block;
+}
+.header .header-wrapper .nav .phone-number a .number {
+  display: block;
+  color: #fff;
+  font-family: Kudryashev, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  letter-spacing: 0.05em;
+}
+.header .header-wrapper .nav .phone-number .desc {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
 }
 .header .header-wrapper .main {
   display: flex;
@@ -99,6 +119,62 @@ body {
 }
 .header .header-wrapper .main .title-desc span {
   font-weight: 600;
+}
+.header .header-wrapper .main .check-in {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 21.5625rem;
+  height: 10rem;
+}
+.header .header-wrapper .main .check-in img {
+  position: absolute;
+}
+.header .header-wrapper .main .check-in span {
+  mask-image: url("/assets/images/checkin-btn/arrow.svg");
+  width: 1.3125rem;
+  height: 0.625rem;
+  margin-left: 17%;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  background: #fff;
+}
+.header .header-wrapper .main .check-in button {
+  margin-left: 1rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30.48px;
+  letter-spacing: 0.05em;
+}
+.header .header-wrapper .dots-info {
+  position: absolute;
+  display: block;
+  top: -3.125rem;
+  right: 18.75rem;
+  background-image: url("/assets/images/bg-dots.svg");
+  width: 34.125rem;
+  height: 34.125rem;
+}
+.header .header-wrapper .dots-info .circle-text {
+  position: absolute;
+  bottom: 0;
+  right: 16%;
+  width: 13.9375rem;
+  height: 13.0625rem;
+}
+.header .header-wrapper .dots-info .white-dot {
+  position: absolute;
+  bottom: 16%;
+  right: 36%;
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
