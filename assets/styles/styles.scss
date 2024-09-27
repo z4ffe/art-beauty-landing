@@ -11,6 +11,7 @@ a {
 
 body {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: rem(1920);
   background-color: #fff;
@@ -193,6 +194,131 @@ body {
         height: rem(12);
         border-radius: 50%;
         background-color: #fff;
+      }
+    }
+  }
+}
+
+.clients {
+  display: flex;
+  width: rem(1920);
+  background-color: #F0E3DA;
+
+  .clients-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: rem(110) rem(258);
+    width: 100%;
+    overflow: hidden;
+
+    .clients-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .clients-title {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          font-size: rem(85);
+          font-weight: 400;
+          font-family: Kudryashev, sans-serif;
+          color: #B78C6E;
+          margin: 0;
+          padding: 0;
+
+        }
+
+        h3 {
+          font-size: rem(85);
+          font-weight: 400;
+          font-family: Kudryashev, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .clients-controls {
+        display: flex;
+        gap: rem(15);
+
+        button {
+          color: #DBBF8D;
+          font-size: rem(55);
+          background-color: #F9F4F0;
+          width: rem(96);
+          height: rem(96);
+          border: none;
+          transition: .1s;
+
+          &:hover {
+            transform: scale(105%);
+            font-size: rem(60);
+          }
+
+          &:active {
+            transform: scale(95%);
+          }
+        }
+      }
+    }
+
+    .clients-slider {
+      display: flex;
+      margin-top: rem(74);
+      justify-content: center;
+      transition: .4s;
+
+      .client-tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: rem(300);
+        height: rem(348);
+        border-left: 1px solid rgba(128, 128, 128, 0.2);
+        border-right: 1px solid rgba(128, 128, 128, 0.2);
+        padding: 0 rem(30);
+
+        .client-name {
+          font-family: Kudryashev, sans-serif;
+          text-align: center;
+          font-size: rem(20);
+          letter-spacing: rem(2);
+          color: #1D1D1A;
+        }
+
+
+        .client-photo {
+          width: rem(120);
+        }
+
+        .client-desc {
+          text-align: center;
+          line-height: rem(23);
+          font-size: rem(14);
+          color: #22211E;
+        }
+      }
+
+      .client-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+          display: flex;
+          gap: rem(35);
+          list-style: none;
+          padding: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+          }
+        }
       }
     }
   }
