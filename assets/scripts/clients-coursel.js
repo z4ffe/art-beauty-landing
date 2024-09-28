@@ -1,4 +1,4 @@
-import JSON from '/assets/data/clients.json' with {type: 'json'}
+import JSON from '../data/clients.json' with {type: 'json'}
 
 const clientsSlider = document.querySelector('.clients-slider')
 const sliderButtons = document.querySelectorAll('button[data-type=slider]')

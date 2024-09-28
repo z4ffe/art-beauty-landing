@@ -23,7 +23,7 @@ body {
 
   .header-wrapper {
     position: relative;
-    background-image: url('/assets/images/header-bg.png');
+    background-image: url('../images/header-bg.png');
     padding: 0 rem(260);
     width: rem(1920);
 
@@ -145,7 +145,7 @@ body {
         }
 
         span {
-          mask-image: url('/assets/images/checkin-btn/arrow.svg');
+          mask-image: url('../images/checkin-btn/arrow.svg');
           width: rem(21);
           height: rem(10);
           margin-left: 17%;
@@ -173,7 +173,7 @@ body {
       display: block;
       top: rem(-50);
       right: rem(300);
-      background-image: url('/assets/images/bg-dots.svg');
+      background-image: url('../images/bg-dots.svg');
       width: rem(546);
       height: rem(546);
 
@@ -295,7 +295,7 @@ body {
   .procedure-promo {
     position: relative;
     display: flex;
-    background-image: url("/assets/images/procedure-promo.png");
+    background-image: url("../images/procedure-promo.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
