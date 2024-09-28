@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 120rem;
+  width: 120rem;
   background-color: #fff;
 }
 
@@ -176,6 +176,103 @@ body {
   height: 0.75rem;
   border-radius: 50%;
   background-color: #fff;
+}
+
+.procedure-form {
+  display: flex;
+  width: 120rem;
+}
+.procedure-form .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: #1D1D1A;
+  padding: 10.3125rem 0;
+}
+.procedure-form .form-wrapper .form-title {
+  display: flex;
+  flex-direction: column;
+  max-width: 32.5625rem;
+}
+.procedure-form .form-wrapper .form-title h2 {
+  font-weight: 400;
+  font-family: Kudryashev, sans-serif;
+  color: #B68C6E;
+  font-size: 3.125rem;
+  text-align: center;
+  margin: 0;
+}
+.procedure-form .form-wrapper .form-title h3 {
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 2.25rem;
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin-top: 1.375rem;
+}
+.procedure-form .form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  margin-top: 1.375rem;
+  width: 31.25rem;
+}
+.procedure-form .form-wrapper form label {
+  display: flex;
+  width: 100%;
+}
+.procedure-form .form-wrapper form label input {
+  padding: 0 2.5rem;
+  width: 100%;
+  height: 5.8125rem;
+  background-color: transparent;
+  border: 2px solid #B68C6E;
+  color: #FFFFFF;
+  font-size: 1.5625rem;
+}
+.procedure-form .form-wrapper form label input::placeholder {
+  transition: 0.3s;
+}
+.procedure-form .form-wrapper form label input:hover::placeholder {
+  color: #FFFFFF;
+  padding-left: 5%;
+}
+.procedure-form .form-wrapper form button {
+  height: 5.8125rem;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #B68C6E;
+  color: #FFFFFF;
+  transition: 0.2s;
+}
+.procedure-form .form-wrapper form button:hover {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #B68C6E;
+}
+.procedure-form .form-wrapper form button:active {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #B68C6E;
+  transform: scale(95%);
+}
+.procedure-form .procedure-promo {
+  position: relative;
+  display: flex;
+  background-image: url("/assets/images/procedure-promo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+.procedure-form .procedure-promo img {
+  position: absolute;
+  top: 4.375rem;
+  left: 4.375rem;
+  width: 20rem;
+  height: 9.375rem;
 }
 
 .clients {
