@@ -1,6 +1,11 @@
 const form = document.querySelector('#promo-form')
 
-form.addEventListener('submit', (e) => {
-	e.preventDefault()
-	alert('asd')
+form.addEventListener('submit', (event) => {
+	event.preventDefault()
+	const formData = new FormData(form)
+	const formObj = Object.fromEntries(formData)
+	console.log(formObj)
+	form.reset()
 })
+
+
