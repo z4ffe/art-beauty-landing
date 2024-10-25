@@ -179,6 +179,90 @@ body {
   background-color: #fff;
 }
 
+.problems {
+  display: flex;
+  background-color: #fff;
+  width: 120rem;
+  position: relative;
+}
+.problems .background-dots {
+  position: absolute;
+  top: 0;
+  left: 687px;
+}
+.problems .problems-banner .banner-img {
+  position: relative;
+  width: 40.25rem;
+  margin: 5.8125rem 0 14.5rem 16.5rem;
+  z-index: 10;
+}
+.problems .problems-banner .problem-text {
+  position: absolute;
+  left: 11.625rem;
+  bottom: 16.4375rem;
+  z-index: 20;
+}
+.problems .problems-banner .rectangle {
+  position: absolute;
+  left: 8.25rem;
+  bottom: 10.0625rem;
+  width: 44.4375rem;
+  height: 24rem;
+  background-color: #F0E3DA;
+}
+.problems .problems-solution {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.problems .problems-solution .problems-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8.75rem;
+}
+.problems .problems-solution .problems-header h2 {
+  font-family: Kudryashev, sans-serif;
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+.problems .problems-solution .problems-header .header-problems {
+  font-size: 4.75rem;
+  color: #B68C6E;
+}
+.problems .problems-solution .problems-header .header-procedure {
+  padding: 0;
+  margin: 0;
+  color: #312C38;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.problems .problems-solution .solutions {
+  display: flex;
+  width: 100%;
+}
+.problems .problems-solution .solutions ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+}
+.problems .problems-solution .solutions ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.625rem;
+  width: 50%;
+}
+.problems .problems-solution .solutions ul li span {
+  max-width: 14.125rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 29.68px;
+}
+
 .procedure-form {
   display: flex;
   width: 120rem;
@@ -438,6 +522,66 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1rem;
+}
+.footer-wrapper .footer-contacts .contact-address {
+  display: flex;
+  flex-direction: column;
+}
+.footer-wrapper .footer-contacts .contact-address span {
+  color: #FFFFFF;
+}
+.footer-wrapper .footer-contacts .contact-address a {
+  padding-top: 0.625rem;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.footer-wrapper .footer-contacts .contact-mail h4 {
+  font-size: 0.75rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+.footer-wrapper .footer-contacts .contact-mail a {
+  color: #ffffff;
+}
+.footer-wrapper .footer-contacts .contact-social h4 {
+  font-size: 0.75rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+.footer-wrapper .footer-contacts .contact-social ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 0.9375rem;
+}
+.footer-wrapper .footer-phone {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8.125rem;
+  margin-left: 4.375rem;
+  margin-bottom: 8.75rem;
+}
+.footer-wrapper .footer-phone h3 {
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin: 0;
+}
+.footer-wrapper .footer-phone span {
+  font-family: Kudryashev, sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+.footer-wrapper .footer-phone .tel-two {
+  padding-top: 1.0625rem;
+}
+.footer-wrapper .footer-phone a {
+  font-weight: 700;
+  padding-top: 1.375rem;
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 .footer-copyrights {
   display: flex;
