@@ -19,11 +19,12 @@ body {
   margin: 0 auto;
   width: 120rem;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .header {
   display: flex;
-  width: 120rem;
+  width: 100%;
 }
 .header .header-wrapper {
   position: relative;
@@ -182,7 +183,7 @@ body {
 .problems {
   display: flex;
   background-color: #fff;
-  width: 120rem;
+  width: 100%;
   position: relative;
 }
 .problems .background-dots {
@@ -265,7 +266,7 @@ body {
 
 .procedure-form {
   display: flex;
-  width: 120rem;
+  width: 100%;
 }
 .procedure-form .form-wrapper {
   display: flex;
@@ -362,7 +363,7 @@ body {
 
 .clients {
   display: flex;
-  width: 120rem;
+  width: 100%;
   background-color: #F0E3DA;
 }
 .clients .clients-wrapper {
@@ -469,7 +470,7 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
-  width: 120rem;
+  width: 100%;
   background-color: #000000;
 }
 .footer-wrapper {
@@ -599,6 +600,28 @@ body {
 .footer-copyrights .politics {
   cursor: pointer;
   text-decoration: underline;
+}
+
+/* ---------------- MEDIA-QUERY ----------------- */
+@media only screen and (max-width: 430px) {
+  body {
+    width: 26.875rem;
+  }
+  .header {
+    height: 100vh;
+  }
+  .problems {
+    display: none;
+  }
+  .procedure-form {
+    display: none;
+  }
+  .clients {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

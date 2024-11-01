@@ -17,11 +17,12 @@ body {
   margin: 0 auto;
   width: rem(1920);
   background-color: #fff;
+  overflow: hidden;
 }
 
 .header {
   display: flex;
-  width: rem(1920);
+  width: 100%;
 
   .header-wrapper {
     position: relative;
@@ -204,7 +205,7 @@ body {
 .problems {
   display: flex;
   background-color: #fff;
-  width: rem(1920);
+  width: 100%;
   position: relative;
 
   .background-dots {
@@ -305,7 +306,7 @@ body {
 
 .procedure-form {
   display: flex;
-  width: rem(1920);
+  width: 100%;
 
   .form-wrapper {
     display: flex;
@@ -417,7 +418,7 @@ body {
 
 .clients {
   display: flex;
-  width: rem(1920);
+  width: 100%;
   background-color: #F0E3DA;
 
   .clients-wrapper {
@@ -543,7 +544,7 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
-  width: rem(1920);
+  width: 100%;
   background-color: #000000;
 
   &-wrapper {
@@ -705,3 +706,37 @@ body {
     }
   }
 }
+
+
+/* ---------------- MEDIA-QUERY ----------------- */
+
+@media only screen and (max-width: 430px) {
+  body {
+    width: rem(430);
+  }
+
+  .header {
+    height: 100vh;
+  }
+
+  .problems {
+    display: none;
+  }
+
+  .procedure-form {
+    display: none;
+  }
+
+  .clients {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+
+
+
+
