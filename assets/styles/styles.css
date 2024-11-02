@@ -20,7 +20,6 @@ body {
   width: 120rem;
   background-color: #fff;
   overflow-x: hidden;
-  outline: red solid 1px;
 }
 
 .header {
@@ -265,11 +264,11 @@ body {
   line-height: 29.68px;
 }
 
-.procedure-form {
+.procedure {
   display: flex;
   width: 100%;
 }
-.procedure-form .form-wrapper {
+.procedure .procedure__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -278,12 +277,12 @@ body {
   background-color: #1D1D1A;
   padding: 10.3125rem 0;
 }
-.procedure-form .form-wrapper .form-title {
+.procedure .procedure__wrapper .procedure__title {
   display: flex;
   flex-direction: column;
   max-width: 32.5625rem;
 }
-.procedure-form .form-wrapper .form-title h2 {
+.procedure .procedure__wrapper .procedure__title h2 {
   font-weight: 400;
   font-family: Kudryashev, sans-serif;
   color: #B68C6E;
@@ -291,7 +290,7 @@ body {
   text-align: center;
   margin: 0;
 }
-.procedure-form .form-wrapper .form-title h3 {
+.procedure .procedure__wrapper .procedure__title h3 {
   color: #FFFFFF;
   text-align: center;
   line-height: 2.25rem;
@@ -299,18 +298,18 @@ body {
   font-size: 1.125rem;
   margin-top: 1.375rem;
 }
-.procedure-form .form-wrapper form {
+.procedure .procedure__wrapper .procedure__form {
   display: flex;
   flex-direction: column;
   gap: 1.375rem;
   margin-top: 1.375rem;
   width: 31.25rem;
 }
-.procedure-form .form-wrapper form label {
+.procedure .procedure__wrapper .procedure__form label {
   display: flex;
   width: 100%;
 }
-.procedure-form .form-wrapper form label input {
+.procedure .procedure__wrapper .procedure__form label input {
   padding: 0 2.5rem;
   width: 100%;
   height: 5.8125rem;
@@ -319,14 +318,15 @@ body {
   color: #FFFFFF;
   font-size: 1.5625rem;
 }
-.procedure-form .form-wrapper form label input::placeholder {
+.procedure .procedure__wrapper .procedure__form label input::placeholder {
+  color: #504339;
   transition: 0.3s;
 }
-.procedure-form .form-wrapper form label input:hover::placeholder {
+.procedure .procedure__wrapper .procedure__form label input:hover::placeholder {
   color: #FFFFFF;
   padding-left: 5%;
 }
-.procedure-form .form-wrapper form button {
+.procedure .procedure__wrapper .procedure__form button {
   height: 5.8125rem;
   width: 100%;
   text-transform: uppercase;
@@ -335,18 +335,18 @@ body {
   color: #FFFFFF;
   transition: 0.2s;
 }
-.procedure-form .form-wrapper form button:hover {
+.procedure .procedure__wrapper .procedure__form button:hover {
   font-weight: 500;
   font-size: 1.25rem;
   color: #B68C6E;
 }
-.procedure-form .form-wrapper form button:active {
+.procedure .procedure__wrapper .procedure__form button:active {
   font-weight: 500;
   font-size: 1.25rem;
   color: #B68C6E;
   transform: scale(95%);
 }
-.procedure-form .procedure-promo {
+.procedure .procedure__banner {
   position: relative;
   display: flex;
   background-image: url("../images/procedure-promo.png");
@@ -354,11 +354,11 @@ body {
   background-size: cover;
   width: 50%;
 }
-.procedure-form .procedure-promo img {
+.procedure .procedure__banner img {
   position: absolute;
   top: 4.375rem;
   left: 4.375rem;
-  width: 20rem;
+  width: 50%;
   height: 9.375rem;
 }
 
@@ -615,7 +615,7 @@ body {
     padding: 0 1.5625rem;
     background-image: url("../images/mobile-bg.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
   .header .header__wrapper .nav .nav__logo {
     margin-top: 0.6875rem;
@@ -672,6 +672,51 @@ body {
   }
   .problems {
     display: none;
+  }
+  .procedure {
+    flex-direction: column-reverse;
+  }
+  .procedure .procedure__wrapper {
+    width: 100%;
+    padding: 2.1875rem 0;
+  }
+  .procedure .procedure__wrapper .procedure__title h2 {
+    margin: 0 auto;
+    font-size: 2.1875rem;
+    text-align: center;
+    width: 80%;
+    line-height: 50px;
+    font-weight: 400;
+    letter-spacing: 4px;
+  }
+  .procedure .procedure__wrapper .procedure__title h3 {
+    text-align: center;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    padding: 0 0.9375rem;
+  }
+  .procedure .procedure__form {
+    align-items: center;
+  }
+  .procedure .procedure__form label {
+    width: 78% !important;
+  }
+  .procedure .procedure__form button {
+    width: 78% !important;
+  }
+  .procedure .procedure__banner {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-image: url("../images/procedure-promo-mobile.png");
+    background-size: cover;
+  }
+  .procedure .procedure__banner img {
+    position: absolute;
+    top: 1.625rem;
+    left: 1.25rem;
+    width: 138px;
+    height: auto;
   }
   .clients {
     display: none;
