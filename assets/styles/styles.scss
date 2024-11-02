@@ -17,18 +17,19 @@ body {
   margin: 0 auto;
   width: rem(1920);
   background-color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
+  outline: red solid 1px;
 }
 
 .header {
   display: flex;
   width: 100%;
 
-  .header-wrapper {
+  .header__wrapper {
     position: relative;
-    background-image: url('../images/header-bg.png');
     padding: 0 rem(260);
-    width: rem(1920);
+    background-image: url('../images/header-bg.png');
+    width: 100%;
 
     .nav {
       display: flex;
@@ -40,7 +41,7 @@ body {
         gap: rem(34);
         padding-left: rem(26);
 
-        .about {
+        .nav__about {
           font-size: 14px;
           width: rem(173);
           color: #fff;
@@ -48,7 +49,7 @@ body {
           font-weight: 500;
         }
 
-        .address {
+        .nav_address {
           font-size: 14px;
           width: 242px;
           color: #fff;
@@ -57,14 +58,14 @@ body {
         }
       }
 
-      .social {
+      .nav__social {
         display: flex;
         gap: rem(36);
         padding-left: rem(225);
         z-index: 10;
       }
 
-      .phone-number {
+      .nav__phone {
         display: flex;
         flex-direction: column;
         margin-left: 40px;
@@ -74,7 +75,7 @@ body {
         a {
           display: block;
 
-          .number {
+          .nav__number {
             display: block;
             color: #fff;
             font-family: Kudryashev, sans-serif;
@@ -85,7 +86,7 @@ body {
           }
         }
 
-        .desc {
+        .nav__desc {
           display: block;
           color: #fff;
           font-size: 12px;
@@ -100,7 +101,7 @@ body {
       flex-direction: column;
 
 
-      .title {
+      .main__title {
         display: flex;
         flex-direction: column;
         padding: rem(68) 0 0 0;
@@ -126,7 +127,7 @@ body {
         }
       }
 
-      .title-desc {
+      .main__desc {
         color: #fff;
         font-size: rem(23);
         max-width: rem(378);
@@ -136,7 +137,7 @@ body {
         }
       }
 
-      .check-in {
+      .main__checkin {
         position: relative;
         display: flex;
         align-items: center;
@@ -171,7 +172,7 @@ body {
       }
     }
 
-    .dots-info {
+    .header__bg {
       position: absolute;
       display: block;
       top: rem(-50);
@@ -180,7 +181,7 @@ body {
       width: rem(546);
       height: rem(546);
 
-      .circle-text {
+      .header__circle-text {
         position: absolute;
         bottom: 0;
         right: 16%;
@@ -188,7 +189,7 @@ body {
         height: rem(209);
       }
 
-      .white-dot {
+      .header__bg-dots {
         position: absolute;
         bottom: 16%;
         right: 36%;
@@ -716,7 +717,89 @@ body {
   }
 
   .header {
-    height: 100vh;
+    max-height: rem(949);
+
+    .header__wrapper {
+      padding: 0 rem(25);
+      background-image: url('../images/mobile-bg.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      .nav {
+        .nav__logo {
+          margin-top: rem(11);
+
+          a {
+            img {
+              width: rem(175);
+            }
+          }
+        }
+
+        .nav__info {
+          display: none;
+        }
+
+        .nav__social {
+          display: none;
+        }
+
+        .nav__phone {
+          display: none;
+        }
+      }
+
+      .main {
+        height: 100%;
+
+        .main__title {
+          h1 {
+            font-size: rem(30);
+            line-height: 50px;
+          }
+
+          span {
+            font-size: rem(30);
+            line-height: 50px;
+            width: rem(240);
+          }
+        }
+
+        .main__desc {
+          font-size: rem(12);
+          width: 166px;
+          line-height: rem(20);
+        }
+
+        .main__checkin {
+          margin: 0;
+
+          img {
+            width: 110px;
+          }
+
+          span {
+            margin-left: 12%;
+          }
+
+          button {
+            font-size: rem(16);
+          }
+        }
+
+      }
+
+      .header__bg {
+        top: 2%;
+        left: 30%;
+        background-size: 50%;
+        background-repeat: no-repeat;
+
+        .header__circle-text {
+          display: none;
+        }
+      }
+    }
   }
 
   .problems {
@@ -724,7 +807,7 @@ body {
   }
 
   .procedure-form {
-    display: none;
+    // display: none;
   }
 
   .clients {

@@ -19,60 +19,61 @@ body {
   margin: 0 auto;
   width: 120rem;
   background-color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
+  outline: red solid 1px;
 }
 
 .header {
   display: flex;
   width: 100%;
 }
-.header .header-wrapper {
+.header .header__wrapper {
   position: relative;
-  background-image: url("../images/header-bg.png");
   padding: 0 16.25rem;
-  width: 120rem;
+  background-image: url("../images/header-bg.png");
+  width: 100%;
 }
-.header .header-wrapper .nav {
+.header .header__wrapper .nav {
   display: flex;
   width: 100%;
   align-items: center;
 }
-.header .header-wrapper .nav__info {
+.header .header__wrapper .nav__info {
   display: flex;
   gap: 2.125rem;
   padding-left: 1.625rem;
 }
-.header .header-wrapper .nav__info .about {
+.header .header__wrapper .nav__info .nav__about {
   font-size: 14px;
   width: 10.8125rem;
   color: #fff;
   line-height: 21.76px;
   font-weight: 500;
 }
-.header .header-wrapper .nav__info .address {
+.header .header__wrapper .nav__info .nav_address {
   font-size: 14px;
   width: 242px;
   color: #fff;
   line-height: 21.76px;
   font-weight: 500;
 }
-.header .header-wrapper .nav .social {
+.header .header__wrapper .nav .nav__social {
   display: flex;
   gap: 2.25rem;
   padding-left: 14.0625rem;
   z-index: 10;
 }
-.header .header-wrapper .nav .phone-number {
+.header .header__wrapper .nav .nav__phone {
   display: flex;
   flex-direction: column;
   margin-left: 40px;
   gap: 0.8125rem;
   z-index: 10;
 }
-.header .header-wrapper .nav .phone-number a {
+.header .header__wrapper .nav .nav__phone a {
   display: block;
 }
-.header .header-wrapper .nav .phone-number a .number {
+.header .header__wrapper .nav .nav__phone a .nav__number {
   display: block;
   color: #fff;
   font-family: Kudryashev, sans-serif;
@@ -81,24 +82,24 @@ body {
   line-height: 26.4px;
   letter-spacing: 0.05em;
 }
-.header .header-wrapper .nav .phone-number .desc {
+.header .header__wrapper .nav .nav__phone .nav__desc {
   display: block;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
   line-height: 14.63px;
 }
-.header .header-wrapper .main {
+.header .header__wrapper .main {
   display: flex;
   flex-direction: column;
 }
-.header .header-wrapper .main .title {
+.header .header__wrapper .main .main__title {
   display: flex;
   flex-direction: column;
   padding: 4.25rem 0 0 0;
   max-width: 36.3125rem;
 }
-.header .header-wrapper .main .title h1 {
+.header .header__wrapper .main .main__title h1 {
   font-family: Kudryashev, sans-serif;
   font-size: 5rem;
   max-width: 36.25rem;
@@ -107,7 +108,7 @@ body {
   margin: 0;
   text-transform: uppercase;
 }
-.header .header-wrapper .main .title span {
+.header .header__wrapper .main .main__title span {
   font-family: Kudryashev, sans-serif;
   margin: 0;
   color: #fff;
@@ -115,25 +116,25 @@ body {
   font-size: 3.75rem;
   text-transform: uppercase;
 }
-.header .header-wrapper .main .title-desc {
+.header .header__wrapper .main .main__desc {
   color: #fff;
   font-size: 1.4375rem;
   max-width: 23.625rem;
 }
-.header .header-wrapper .main .title-desc span {
+.header .header__wrapper .main .main__desc span {
   font-weight: 600;
 }
-.header .header-wrapper .main .check-in {
+.header .header__wrapper .main .main__checkin {
   position: relative;
   display: flex;
   align-items: center;
   width: 21.5625rem;
   height: 10rem;
 }
-.header .header-wrapper .main .check-in img {
+.header .header__wrapper .main .main__checkin img {
   position: absolute;
 }
-.header .header-wrapper .main .check-in span {
+.header .header__wrapper .main .main__checkin span {
   mask-image: url("../images/checkin-btn/arrow.svg");
   width: 1.3125rem;
   height: 0.625rem;
@@ -142,7 +143,7 @@ body {
   mask-size: 100%;
   background: #fff;
 }
-.header .header-wrapper .main .check-in button {
+.header .header__wrapper .main .main__checkin button {
   margin-left: 1rem;
   color: #fff;
   background: transparent;
@@ -153,7 +154,7 @@ body {
   line-height: 30.48px;
   letter-spacing: 0.05em;
 }
-.header .header-wrapper .dots-info {
+.header .header__wrapper .header__bg {
   position: absolute;
   display: block;
   top: -3.125rem;
@@ -162,14 +163,14 @@ body {
   width: 34.125rem;
   height: 34.125rem;
 }
-.header .header-wrapper .dots-info .circle-text {
+.header .header__wrapper .header__bg .header__circle-text {
   position: absolute;
   bottom: 0;
   right: 16%;
   width: 13.9375rem;
   height: 13.0625rem;
 }
-.header .header-wrapper .dots-info .white-dot {
+.header .header__wrapper .header__bg .header__bg-dots {
   position: absolute;
   bottom: 16%;
   right: 36%;
@@ -608,12 +609,68 @@ body {
     width: 26.875rem;
   }
   .header {
-    height: 100vh;
+    max-height: 59.3125rem;
   }
-  .problems {
+  .header .header__wrapper {
+    padding: 0 1.5625rem;
+    background-image: url("../images/mobile-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .header .header__wrapper .nav .nav__logo {
+    margin-top: 0.6875rem;
+  }
+  .header .header__wrapper .nav .nav__logo a img {
+    width: 10.9375rem;
+  }
+  .header .header__wrapper .nav .nav__info {
     display: none;
   }
-  .procedure-form {
+  .header .header__wrapper .nav .nav__social {
+    display: none;
+  }
+  .header .header__wrapper .nav .nav__phone {
+    display: none;
+  }
+  .header .header__wrapper .main {
+    height: 100%;
+  }
+  .header .header__wrapper .main .main__title h1 {
+    font-size: 1.875rem;
+    line-height: 50px;
+  }
+  .header .header__wrapper .main .main__title span {
+    font-size: 1.875rem;
+    line-height: 50px;
+    width: 15rem;
+  }
+  .header .header__wrapper .main .main__desc {
+    font-size: 0.75rem;
+    width: 166px;
+    line-height: 1.25rem;
+  }
+  .header .header__wrapper .main .main__checkin {
+    margin: 0;
+  }
+  .header .header__wrapper .main .main__checkin img {
+    width: 110px;
+  }
+  .header .header__wrapper .main .main__checkin span {
+    margin-left: 12%;
+  }
+  .header .header__wrapper .main .main__checkin button {
+    font-size: 1rem;
+  }
+  .header .header__wrapper .header__bg {
+    top: 2%;
+    left: 30%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
+  .header .header__wrapper .header__bg .header__circle-text {
+    display: none;
+  }
+  .problems {
     display: none;
   }
   .clients {
