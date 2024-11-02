@@ -18,6 +18,7 @@ body {
   width: 1920px;
   background-color: #fff;
   overflow-x: hidden;
+  touch-action: none;
   // outline: red solid 1px;
 }
 
@@ -840,16 +841,6 @@ body {
     .procedure__form {
       width: 90% !important;
       align-items: center;
-
-      label {
-
-        input {
-        }
-      }
-
-      button {
-        // width: 78% !important;
-      }
     }
 
 
