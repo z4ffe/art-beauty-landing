@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: rem(1920);
+  width: 1920px;
   background-color: #fff;
   overflow-x: hidden;
   // outline: red solid 1px;
@@ -713,7 +713,7 @@ body {
 
 @media only screen and (max-width: 430px) {
   body {
-    width: rem(430);
+    width: 100%;
   }
 
   .header {
