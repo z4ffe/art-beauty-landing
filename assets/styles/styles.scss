@@ -347,7 +347,7 @@ body {
       flex-direction: column;
       gap: rem(22);
       margin-top: rem(22);
-      width: rem(500);
+      width: 55%;
 
       label {
         display: flex;
@@ -791,11 +791,14 @@ body {
 
       .header__bg {
         top: 2%;
-        left: 30%;
         background-size: 50%;
         background-repeat: no-repeat;
 
         .header__circle-text {
+          display: none;
+        }
+
+        .header__bg-dots {
           display: none;
         }
       }
@@ -835,17 +838,17 @@ body {
     }
 
     .procedure__form {
+      width: 90% !important;
       align-items: center;
 
       label {
-        width: 78% !important;
 
         input {
         }
       }
 
       button {
-        width: 78% !important;
+        // width: 78% !important;
       }
     }
 

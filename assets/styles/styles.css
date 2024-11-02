@@ -303,7 +303,7 @@ body {
   flex-direction: column;
   gap: 1.375rem;
   margin-top: 1.375rem;
-  width: 31.25rem;
+  width: 55%;
 }
 .procedure .procedure__wrapper .procedure__form label {
   display: flex;
@@ -663,11 +663,13 @@ body {
   }
   .header .header__wrapper .header__bg {
     top: 2%;
-    left: 30%;
     background-size: 50%;
     background-repeat: no-repeat;
   }
   .header .header__wrapper .header__bg .header__circle-text {
+    display: none;
+  }
+  .header .header__wrapper .header__bg .header__bg-dots {
     display: none;
   }
   .problems {
@@ -696,13 +698,8 @@ body {
     padding: 0 0.9375rem;
   }
   .procedure .procedure__form {
+    width: 90% !important;
     align-items: center;
-  }
-  .procedure .procedure__form label {
-    width: 78% !important;
-  }
-  .procedure .procedure__form button {
-    width: 78% !important;
   }
   .procedure .procedure__banner {
     width: 100%;
