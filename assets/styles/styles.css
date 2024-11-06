@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -651,6 +655,7 @@ body {
   }
   .header .header__wrapper .main .main__checkin {
     margin: 0;
+    width: auto;
   }
   .header .header__wrapper .main .main__checkin img {
     width: 110px;
