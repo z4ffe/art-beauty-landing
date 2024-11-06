@@ -7,10 +7,6 @@
   // outline: red solid 1px;
 }
 
-img {
-  max-width: 100%
-}
-
 a {
   text-decoration: none;
 }
@@ -553,12 +549,12 @@ body {
   width: 100%;
   background-color: #000000;
 
-  &-wrapper {
+  .footer__wrapper {
     display: flex;
     background-color: #D1AE8E;
     margin: rem(110) rem(260);
 
-    .footer-logo {
+    .footer__logo {
       display: flex;
       flex-direction: column;
       padding-top: rem(65);
@@ -571,7 +567,7 @@ body {
       }
     }
 
-    .footer-menu {
+    .footer__menu {
       display: flex;
       flex-direction: column;
       margin-left: rem(90);
@@ -601,7 +597,7 @@ body {
       }
     }
 
-    .footer-contacts {
+    .footer__contacts {
       display: flex;
       flex-direction: column;
       margin-left: rem(160);
@@ -614,7 +610,7 @@ body {
         font-size: rem(16);
       }
 
-      .contact-address {
+      .footer__address {
         display: flex;
         flex-direction: column;
 
@@ -629,7 +625,7 @@ body {
         }
       }
 
-      .contact-mail {
+      .footer__mail {
         h4 {
           font-size: rem(12);
           color: #ffffff;
@@ -641,7 +637,7 @@ body {
         }
       }
 
-      .contact-social {
+      .footer__socials {
         h4 {
           font-size: rem(12);
           color: #ffffff;
@@ -657,7 +653,7 @@ body {
       }
     }
 
-    .footer-phone {
+    .footer__phone {
       display: flex;
       flex-direction: column;
       margin-top: rem(130);
@@ -687,12 +683,16 @@ body {
         font-weight: 700;
         padding-top: rem(22);
         color: #FFFFFF;
-        text-decoration: underline;
+      }
+
+      .footer__callback {
+        width: fit-content;
+        border-bottom: 2px solid #DFC6B0;
       }
     }
   }
 
-  &-copyrights {
+  .footer__copyright {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -706,7 +706,7 @@ body {
       text-align: center;
     }
 
-    .politics {
+    .footer__politics {
       cursor: pointer;
       text-decoration: underline;
     }
@@ -871,7 +871,81 @@ body {
   }
 
   .footer {
-    display: none;
+    background-color: #D1AE8E;
+
+    .footer__wrapper {
+      flex-direction: column;
+      margin: 0;
+      background-color: #D1AE8E;
+
+      .footer__logo {
+        display: none;
+      }
+
+      .footer__menu {
+        margin: rem(40) 0 0;
+        align-items: center;
+
+        ul {
+          align-items: center;
+        }
+      }
+
+      .footer__contacts {
+        margin: rem(39) 0 0;
+        align-items: center;
+        gap: rem(13);
+
+        h3 {
+          margin: 0;
+        }
+
+        .footer__address {
+          align-items: center;
+        }
+
+        .footer__mail {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer__socials {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: rem(17) 0 0;
+
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+
+      .footer__phone {
+        margin: rem(28) 0 rem(35);
+        align-items: center;
+
+        a {
+          padding-top: rem(18);
+        }
+      }
+    }
+
+    .footer__copyright {
+      color: #fff;
+      font-size: rem(14);
+
+      .footer__copyrights {
+        color: inherit;
+        font-size: inherit;
+      }
+
+      .footer__politics {
+        color: inherit;
+        font-size: inherit;
+      }
+    }
   }
 }
 
