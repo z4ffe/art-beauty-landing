@@ -17,9 +17,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 1920px;
   background-color: #fff;
   overflow-x: hidden;
+  max-width: 1920px;
 }
 
 .header {
@@ -28,6 +28,8 @@ body {
 }
 .header .header__wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 0 16.25rem;
   background-image: url("../images/header-bg.png");
   width: 100%;
@@ -37,19 +39,19 @@ body {
   width: 100%;
   align-items: center;
 }
-.header .header__wrapper .nav__info {
+.header .header__wrapper .nav .nav__info {
   display: flex;
   gap: 2.125rem;
   padding-left: 1.625rem;
 }
-.header .header__wrapper .nav__info .nav__about {
+.header .header__wrapper .nav .nav__info .nav__about {
   font-size: 14px;
   width: 10.8125rem;
   color: #fff;
   line-height: 21.76px;
   font-weight: 500;
 }
-.header .header__wrapper .nav__info .nav_address {
+.header .header__wrapper .nav .nav__info .nav_address {
   font-size: 14px;
   width: 242px;
   color: #fff;
@@ -64,16 +66,14 @@ body {
 }
 .header .header__wrapper .nav .nav__phone {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   margin-left: 40px;
   gap: 0.8125rem;
   z-index: 10;
 }
-.header .header__wrapper .nav .nav__phone a {
-  display: block;
-}
-.header .header__wrapper .nav .nav__phone a .nav__number {
-  display: block;
+.header .header__wrapper .nav .nav__phone .nav__number {
+  display: flex;
   color: #fff;
   font-family: Kudryashev, sans-serif;
   font-size: 22px;
@@ -126,7 +126,7 @@ body {
 .header .header__wrapper .main .appointment-btn {
   margin: 3.125rem 0 6.25rem;
 }
-.header .header__wrapper .header__bg {
+.header .header__wrapper .header__background {
   position: absolute;
   display: block;
   top: -3.125rem;
@@ -135,14 +135,14 @@ body {
   width: 34.125rem;
   height: 34.125rem;
 }
-.header .header__wrapper .header__bg .header__circle-text {
+.header .header__wrapper .header__background .header__background-text {
   position: absolute;
   bottom: 0;
   right: 16%;
   width: 13.9375rem;
   height: 13.0625rem;
 }
-.header .header__wrapper .header__bg .header__bg-dots {
+.header .header__wrapper .header__background .header__background-img {
   position: absolute;
   bottom: 16%;
   right: 36%;
@@ -506,6 +506,7 @@ body {
 .footer .footer__wrapper .footer__phone {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   margin-top: 8.125rem;
   margin-left: 4.375rem;
   margin-bottom: 8.75rem;
@@ -553,11 +554,8 @@ body {
   text-decoration: underline;
 }
 
-/* ---------------- MEDIA-QUERY ----------------- */
+/* ---------------- MEDIA-QUERY 430px ----------------- */
 @media only screen and (max-width: 430px) {
-  body {
-    width: 100%;
-  }
   .header {
     max-height: 59.3125rem;
   }
@@ -612,15 +610,16 @@ body {
   .header .header__wrapper .main .appointment-btn button {
     font-size: 1rem;
   }
-  .header .header__wrapper .header__bg {
+  .header .header__wrapper .header__background {
     top: 2%;
+    left: 40%;
     background-size: 50%;
     background-repeat: no-repeat;
   }
-  .header .header__wrapper .header__bg .header__circle-text {
+  .header .header__wrapper .header__background .header__background-text {
     display: none;
   }
-  .header .header__wrapper .header__bg .header__bg-dots {
+  .header .header__wrapper .header__background .header__background-img {
     display: none;
   }
   .problems {
@@ -835,6 +834,66 @@ body {
     align-self: center;
   }
 }
+/* ---------------- MEDIA-QUERY 1440px ----------------- */
+@media only screen and (min-width: 431px) and (max-width: 1440px) {
+  .header .header__wrapper {
+    padding: 0 1.5625rem !important;
+  }
+  .header .header__wrapper .nav .nav__social {
+    margin-left: auto !important;
+    padding-left: 0 !important;
+  }
+  .clients .clients__wrapper {
+    margin: 6.875rem 3.125rem !important;
+  }
+  .footer .footer__wrapper {
+    margin: 0 0 1.25rem !important;
+  }
+}
+/* ---------------- MEDIA-QUERY 1650px ----------------- */
+@media only screen and (min-width: 431px) and (max-width: 1650px) {
+  .header .header__wrapper {
+    padding: 0 6.25rem;
+  }
+  .header .header__wrapper nav .nav__social {
+    margin-left: auto !important;
+    padding-left: 0 !important;
+  }
+  .header .header__background {
+    right: 0 !important;
+  }
+  .clients .clients__wrapper {
+    margin: 6.875rem 9.375rem;
+  }
+  .problems .problems__banner .problems__banner-img {
+    margin: 5.8125rem 0 14.5rem 3.125rem;
+  }
+  .problems .problems__banner .problems__banner-text {
+    left: 3.125rem;
+  }
+  .problems .problems__banner .problems__banner-rectangle {
+    left: 0;
+  }
+  .footer .footer__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1.25rem !important;
+  }
+  .footer .footer__wrapper .footer__logo {
+    padding-left: 0;
+  }
+}
+/* ---------------- MEDIA-QUERY 1850px ----------------- */
+@media only screen and (min-width: 1650px) and (max-width: 1885px) {
+  .footer .footer__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 6.875rem 11.25rem !important;
+  }
+  .footer .footer__wrapper .footer__logo {
+    padding-left: 0;
+  }
+}
 /* ---------------- appointment-btn ----------------- */
 .appointment-btn {
   position: relative;
@@ -896,7 +955,7 @@ body {
   justify-content: center;
   width: auto;
   max-width: 18.75rem;
-  height: 21.75rem;
+  height: auto;
   border-left: 1px solid rgba(128, 128, 128, 0.2);
   border-right: 1px solid rgba(128, 128, 128, 0.2);
   padding: 0 1.875rem;

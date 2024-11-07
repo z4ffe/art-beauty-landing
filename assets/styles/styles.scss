@@ -15,10 +15,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 1920px;
+  //width: 1920px;
   background-color: #fff;
   overflow-x: hidden;
-  // max-width: 1920px
+  max-width: 1920px
   // outline: red solid 1px;
 }
 
@@ -28,6 +28,8 @@ body {
 
   .header__wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 0 rem(260);
     background-image: url('../images/header-bg.png');
     width: 100%;
@@ -37,7 +39,7 @@ body {
       width: 100%;
       align-items: center;
 
-      &__info {
+      .nav__info {
         display: flex;
         gap: rem(34);
         padding-left: rem(26);
@@ -68,23 +70,20 @@ body {
 
       .nav__phone {
         display: flex;
+        flex-shrink: 0;
         flex-direction: column;
         margin-left: 40px;
         gap: rem(13);
         z-index: 10;
 
-        a {
-          display: block;
-
-          .nav__number {
-            display: block;
-            color: #fff;
-            font-family: Kudryashev, sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 26.4px;
-            letter-spacing: 0.05em;
-          }
+        .nav__number {
+          display: flex;
+          color: #fff;
+          font-family: Kudryashev, sans-serif;
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 26.4px;
+          letter-spacing: 0.05em;
         }
 
         .nav__desc {
@@ -143,7 +142,7 @@ body {
       }
     }
 
-    .header__bg {
+    .header__background {
       position: absolute;
       display: block;
       top: rem(-50);
@@ -152,7 +151,7 @@ body {
       width: rem(546);
       height: rem(546);
 
-      .header__circle-text {
+      .header__background-text {
         position: absolute;
         bottom: 0;
         right: 16%;
@@ -160,7 +159,7 @@ body {
         height: rem(209);
       }
 
-      .header__bg-dots {
+      .header__background-img {
         position: absolute;
         bottom: 16%;
         right: 36%;
@@ -597,6 +596,7 @@ body {
     .footer__phone {
       display: flex;
       flex-direction: column;
+      flex-shrink: 0;
       margin-top: rem(130);
       margin-left: rem(70);
       margin-bottom: rem(140);
@@ -655,13 +655,9 @@ body {
 }
 
 
-/* ---------------- MEDIA-QUERY ----------------- */
+/* ---------------- MEDIA-QUERY 430px ----------------- */
 
 @media only screen and (max-width: 430px) {
-  body {
-    width: 100%;
-  }
-
   .header {
     max-height: rem(949);
 
@@ -736,16 +732,17 @@ body {
 
       }
 
-      .header__bg {
+      .header__background {
         top: 2%;
+        left: 40%;
         background-size: 50%;
         background-repeat: no-repeat;
 
-        .header__circle-text {
+        .header__background-text {
           display: none;
         }
 
-        .header__bg-dots {
+        .header__background-img {
           display: none;
         }
       }
@@ -1022,6 +1019,105 @@ body {
   }
 }
 
+/* ---------------- MEDIA-QUERY 1440px ----------------- */
+
+@media only screen and (min-width: 431px) and (max-width: 1440px) {
+  .header {
+    .header__wrapper {
+      padding: 0 rem(25) !important;
+
+      .nav {
+        .nav__social {
+          margin-left: auto !important;
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  .clients {
+    .clients__wrapper {
+      margin: rem(110) rem(50) !important;
+    }
+  }
+
+  .footer {
+    .footer__wrapper {
+      margin: 0 0 rem(20) !important;
+    }
+  }
+}
+
+/* ---------------- MEDIA-QUERY 1650px ----------------- */
+
+@media only screen and (min-width: 431px) and (max-width: 1650px) {
+  .header {
+    .header__wrapper {
+      padding: 0 rem(100);
+
+      nav {
+        .nav__social {
+          margin-left: auto !important;
+          padding-left: 0 !important;
+        }
+      }
+    }
+
+    .header__background {
+      right: 0 !important;
+    }
+  }
+
+  .clients {
+    .clients__wrapper {
+      margin: rem(110) rem(150);
+    }
+  }
+
+  .problems {
+    .problems__banner {
+      .problems__banner-img {
+        margin: rem(93) 0 rem(232) rem(50);
+      }
+
+      .problems__banner-text {
+        left: rem(50);
+      }
+
+      .problems__banner-rectangle {
+        left: 0;
+      }
+    }
+  }
+
+  .footer {
+    .footer__wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0 0 rem(20) !important;
+
+      .footer__logo {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+/* ---------------- MEDIA-QUERY 1850px ----------------- */
+
+@media only screen and (min-width: 1650px) and (max-width: 1885px) {
+  .footer {
+    .footer__wrapper {
+      display: flex;
+      justify-content: center;
+      margin: rem(110) rem(180) !important;
+
+      .footer__logo {
+        padding-left: 0;
+      }
+    }
+  }
+}
 
 /* ---------------- appointment-btn ----------------- */
 
@@ -1092,7 +1188,7 @@ body {
   justify-content: center;
   width: auto;
   max-width: rem(300);
-  height: rem(348);
+  height: auto;
   border-left: 1px solid rgba(128, 128, 128, 0.2);
   border-right: 1px solid rgba(128, 128, 128, 0.2);
   padding: 0 rem(30);
