@@ -398,13 +398,14 @@ body {
   gap: 0.9375rem;
 }
 .clients .clients__wrapper .clients__header .clients__controls button {
+  padding: 0;
   color: #DBBF8D;
   font-size: 3.4375rem;
   background-color: #F9F4F0;
   width: 6rem;
   height: 6rem;
   border: none;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 .clients .clients__wrapper .clients__header .clients__controls button:hover {
   transform: scale(105%);
@@ -881,6 +882,10 @@ body {
 
 .swiper-slide {
   display: flex !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0;
 }
 
 /* ---------------- client-tile ----------------- */

@@ -461,13 +461,14 @@ body {
         gap: rem(15);
 
         button {
+          padding: 0;
           color: #DBBF8D;
           font-size: rem(55);
           background-color: #F9F4F0;
           width: rem(96);
           height: rem(96);
           border: none;
-          transition: .1s;
+          transition: .2s;
 
           &:hover {
             transform: scale(105%);
@@ -1076,6 +1077,10 @@ body {
 
 .swiper-slide {
   display: flex !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0;
 }
 
 /* ---------------- client-tile ----------------- */
