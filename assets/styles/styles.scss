@@ -138,38 +138,8 @@ body {
         }
       }
 
-      .main__checkin {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: rem(345);
-        height: rem(160);
-
-        img {
-          position: absolute;
-        }
-
-        span {
-          mask-image: url('../images/checkin-btn/arrow.svg');
-          width: rem(21);
-          height: rem(10);
-          margin-left: 17%;
-          mask-repeat: no-repeat;
-          mask-size: 100%;
-          background: #fff;
-        }
-
-        button {
-          margin-left: rem(16);
-          color: #fff;
-          background: transparent;
-          border: none;
-          text-transform: uppercase;
-          font-size: 25px;
-          font-weight: 600;
-          line-height: 30.48px;
-          letter-spacing: 0.05em;
-        }
+      .appointment-btn {
+        margin: rem(50) 0 rem(100);
       }
     }
 
@@ -216,25 +186,23 @@ body {
     left: calc(1920px / 2 - 273px);
   }
 
+  .problems__banner {
 
-  .problems-banner {
-
-
-    .banner-img {
+    .problems__banner-img {
       position: relative;
       width: rem(644);
       margin: rem(93) 0 rem(232) rem(264);
       z-index: 10;
     }
 
-    .problem-text {
+    .problems__banner-text {
       position: absolute;
       left: rem(186);
       bottom: rem(263);
       z-index: 20;
     }
 
-    .rectangle {
+    .problems__banner-rectangle {
       position: absolute;
       left: rem(132);
       bottom: rem(161);
@@ -244,55 +212,67 @@ body {
     }
   }
 
-  .problems-solution {
+  .problems__solution {
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: rem(245) 0 0 rem(72);
 
-    .problems-header {
-      display: flex;
-      flex-direction: column;
-      margin-top: rem(140);
-
-      h2 {
-        font-family: Kudryashev, sans-serif;
-        font-size: rem(88);
-        text-transform: uppercase;
-        padding: 0;
-        margin: 0;
-        font-weight: 400;
-      }
-
-      .header-problems {
-        font-size: rem(76);
-        color: #B68C6E;
-      }
-
-      .header-procedure {
-        padding: 0;
-        margin: 0;
-        color: #312C38;
-        font-size: rem(20);
-        text-transform: uppercase;
-        font-weight: 400;
-      }
+    h1 {
+      top: rem(120);
+      left: -90px;
+      position: absolute;
+      font-family: Kudryashev, sans-serif;
+      font-size: rem(88);
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      font-weight: 400;
+      z-index: 10;
     }
 
-    .solutions {
+    h2 {
+      font-family: Kudryashev, sans-serif;
+      font-size: rem(88);
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .header-problems {
+      font-size: rem(76);
+      color: #B68C6E;
+    }
+
+    .header-procedure {
+      padding: 0;
+      margin: 0;
+      color: #312C38;
+      font-size: rem(20);
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+
+    .problems__solutions {
       display: flex;
       width: 100%;
+      margin-top: rem(45);
 
       ul {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         list-style: none;
+        padding: 0;
 
         li {
           display: flex;
           align-items: center;
           gap: rem(26);
           width: 50%;
+          padding-top: 25px;
+
 
           span {
             max-width: rem(226);
@@ -303,6 +283,24 @@ body {
         }
       }
     }
+
+    .appointment-btn {
+
+      span {
+        mask-image: url('../images/appointment-btn/dust/arrow.svg');
+        background-color: #B68C6E;
+      }
+
+      button {
+        color: #000;
+      }
+    }
+  }
+
+  .problems__line {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
@@ -412,8 +410,8 @@ body {
       position: absolute;
       top: rem(70);
       left: rem(70);
-      width: 50%;
-      height: rem(150);
+      width: rem(320);
+      height: auto;
     }
   }
 }
@@ -776,7 +774,7 @@ body {
           line-height: rem(20);
         }
 
-        .main__checkin {
+        .appointment-btn {
           margin: 0;
           width: auto;
 
@@ -812,7 +810,85 @@ body {
   }
 
   .problems {
-    display: none;
+    flex-direction: column;
+
+    .problems__banner {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-top: rem(33);
+
+      .problems__banner-img {
+        width: rem(300);
+        height: auto;
+        margin: 0;
+      }
+
+      .problems__banner-text {
+        left: 5%;
+        bottom: 0;
+        width: rem(140);
+      }
+
+      .problems__banner-rectangle {
+        width: rem(267);
+        height: rem(152);
+        bottom: rem(-50);
+        left: 0;
+      }
+    }
+
+    .problems__solution {
+      padding: rem(85) 0 0 25%;
+
+      h1 {
+        left: rem(30);
+        top: rem(37);
+        font-size: rem(37);
+      }
+
+      .header-problems {
+        font-size: rem(37);
+      }
+
+      .header-procedure {
+        font-size: rem(18);
+      }
+
+      .problems__solutions {
+        ul {
+          flex-wrap: nowrap;
+          flex-direction: column;
+          margin-top: 0;
+
+          li {
+            width: 100%;
+          }
+        }
+      }
+
+      .appointment-btn {
+        width: rem(225);
+
+        img {
+          width: rem(88)
+        }
+
+        button {
+          font-size: rem(18);
+        }
+      }
+    }
+
+    .background-dots {
+      left: 0;
+      top: 35%;
+      width: 65%;
+    }
+
+    .problems__line {
+      display: none;
+    }
   }
 
   .procedure {
@@ -860,14 +936,14 @@ body {
         position: absolute;
         top: rem(26);
         left: rem(20);
-        width: 138px;
+        width: rem(180);
         height: auto;
       }
     }
   }
 
   .clients {
-    //display: none;
+    display: none;
   }
 
   .footer {
@@ -950,6 +1026,47 @@ body {
 }
 
 
+/* ---------------- appointment-btn ----------------- */
 
+.appointment-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: rem(345);
+  height: rem(160);
+  transition: transform .5s;
 
+  &:hover {
+    transform: scale(105%);
+  }
 
+  &:active {
+    transform: scale(95%);
+  }
+
+  img {
+    position: absolute;
+  }
+
+  span {
+    mask-image: url('../images/appointment-btn/white/arrow.svg');
+    width: rem(21);
+    height: rem(10);
+    margin-left: 17%;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    background-color: #fff;
+  }
+
+  button {
+    margin-left: rem(16);
+    color: #fff;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30.48px;
+    letter-spacing: 0.05em;
+  }
+}

@@ -123,35 +123,8 @@ body {
 .header .header__wrapper .main .main__desc span {
   font-weight: 600;
 }
-.header .header__wrapper .main .main__checkin {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 21.5625rem;
-  height: 10rem;
-}
-.header .header__wrapper .main .main__checkin img {
-  position: absolute;
-}
-.header .header__wrapper .main .main__checkin span {
-  mask-image: url("../images/checkin-btn/arrow.svg");
-  width: 1.3125rem;
-  height: 0.625rem;
-  margin-left: 17%;
-  mask-repeat: no-repeat;
-  mask-size: 100%;
-  background: #fff;
-}
-.header .header__wrapper .main .main__checkin button {
-  margin-left: 1rem;
-  color: #fff;
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  font-size: 25px;
-  font-weight: 600;
-  line-height: 30.48px;
-  letter-spacing: 0.05em;
+.header .header__wrapper .main .appointment-btn {
+  margin: 3.125rem 0 6.25rem;
 }
 .header .header__wrapper .header__bg {
   position: absolute;
@@ -191,19 +164,19 @@ body {
   top: 0;
   left: 687px;
 }
-.problems .problems-banner .banner-img {
+.problems .problems__banner .problems__banner-img {
   position: relative;
   width: 40.25rem;
   margin: 5.8125rem 0 14.5rem 16.5rem;
   z-index: 10;
 }
-.problems .problems-banner .problem-text {
+.problems .problems__banner .problems__banner-text {
   position: absolute;
   left: 11.625rem;
   bottom: 16.4375rem;
   z-index: 20;
 }
-.problems .problems-banner .rectangle {
+.problems .problems__banner .problems__banner-rectangle {
   position: absolute;
   left: 8.25rem;
   bottom: 10.0625rem;
@@ -211,29 +184,36 @@ body {
   height: 24rem;
   background-color: #F0E3DA;
 }
-.problems .problems-solution {
+.problems .problems__solution {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 15.3125rem 0 0 4.5rem;
 }
-.problems .problems-solution .problems-header {
-  display: flex;
-  flex-direction: column;
-  margin-top: 8.75rem;
-}
-.problems .problems-solution .problems-header h2 {
+.problems .problems__solution h1 {
+  top: 7.5rem;
+  left: -90px;
+  position: absolute;
   font-family: Kudryashev, sans-serif;
   font-size: 5.5rem;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
   font-weight: 400;
+  z-index: 10;
 }
-.problems .problems-solution .problems-header .header-problems {
+.problems .problems__solution h2 {
+  font-family: Kudryashev, sans-serif;
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+.problems .problems__solution .header-problems {
   font-size: 4.75rem;
   color: #B68C6E;
 }
-.problems .problems-solution .problems-header .header-procedure {
+.problems .problems__solution .header-procedure {
   padding: 0;
   margin: 0;
   color: #312C38;
@@ -241,27 +221,42 @@ body {
   text-transform: uppercase;
   font-weight: 400;
 }
-.problems .problems-solution .solutions {
+.problems .problems__solution .problems__solutions {
   display: flex;
   width: 100%;
+  margin-top: 2.8125rem;
 }
-.problems .problems-solution .solutions ul {
+.problems .problems__solution .problems__solutions ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   list-style: none;
+  padding: 0;
 }
-.problems .problems-solution .solutions ul li {
+.problems .problems__solution .problems__solutions ul li {
   display: flex;
   align-items: center;
   gap: 1.625rem;
   width: 50%;
+  padding-top: 25px;
 }
-.problems .problems-solution .solutions ul li span {
+.problems .problems__solution .problems__solutions ul li span {
   max-width: 14.125rem;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 29.68px;
+}
+.problems .problems__solution .appointment-btn span {
+  mask-image: url("../images/appointment-btn/dust/arrow.svg");
+  background-color: #B68C6E;
+}
+.problems .problems__solution .appointment-btn button {
+  color: #000;
+}
+.problems .problems__line {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .procedure {
@@ -358,8 +353,8 @@ body {
   position: absolute;
   top: 4.375rem;
   left: 4.375rem;
-  width: 50%;
-  height: 9.375rem;
+  width: 20rem;
+  height: auto;
 }
 
 .clients {
@@ -652,17 +647,17 @@ body {
     width: 166px;
     line-height: 1.25rem;
   }
-  .header .header__wrapper .main .main__checkin {
+  .header .header__wrapper .main .appointment-btn {
     margin: 0;
     width: auto;
   }
-  .header .header__wrapper .main .main__checkin img {
+  .header .header__wrapper .main .appointment-btn img {
     width: 110px;
   }
-  .header .header__wrapper .main .main__checkin span {
+  .header .header__wrapper .main .appointment-btn span {
     margin-left: 12%;
   }
-  .header .header__wrapper .main .main__checkin button {
+  .header .header__wrapper .main .appointment-btn button {
     font-size: 1rem;
   }
   .header .header__wrapper .header__bg {
@@ -677,6 +672,67 @@ body {
     display: none;
   }
   .problems {
+    flex-direction: column;
+  }
+  .problems .problems__banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.0625rem;
+  }
+  .problems .problems__banner .problems__banner-img {
+    width: 18.75rem;
+    height: auto;
+    margin: 0;
+  }
+  .problems .problems__banner .problems__banner-text {
+    left: 5%;
+    bottom: 0;
+    width: 8.75rem;
+  }
+  .problems .problems__banner .problems__banner-rectangle {
+    width: 16.6875rem;
+    height: 9.5rem;
+    bottom: -3.125rem;
+    left: 0;
+  }
+  .problems .problems__solution {
+    padding: 5.3125rem 0 0 25%;
+  }
+  .problems .problems__solution h1 {
+    left: 1.875rem;
+    top: 2.3125rem;
+    font-size: 2.3125rem;
+  }
+  .problems .problems__solution .header-problems {
+    font-size: 2.3125rem;
+  }
+  .problems .problems__solution .header-procedure {
+    font-size: 1.125rem;
+  }
+  .problems .problems__solution .problems__solutions ul {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .problems .problems__solution .problems__solutions ul li {
+    width: 100%;
+  }
+  .problems .problems__solution .appointment-btn {
+    width: 14.0625rem;
+  }
+  .problems .problems__solution .appointment-btn img {
+    width: 5.5rem;
+  }
+  .problems .problems__solution .appointment-btn button {
+    font-size: 1.125rem;
+  }
+  .problems .background-dots {
+    left: 0;
+    top: 35%;
+    width: 65%;
+  }
+  .problems .problems__line {
     display: none;
   }
   .procedure {
@@ -716,8 +772,11 @@ body {
     position: absolute;
     top: 1.625rem;
     left: 1.25rem;
-    width: 138px;
+    width: 11.25rem;
     height: auto;
+  }
+  .clients {
+    display: none;
   }
   .footer {
     background-color: #D1AE8E;
@@ -781,6 +840,44 @@ body {
     color: inherit;
     font-size: inherit;
   }
+}
+/* ---------------- appointment-btn ----------------- */
+.appointment-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 21.5625rem;
+  height: 10rem;
+  transition: transform 0.5s;
+}
+.appointment-btn:hover {
+  transform: scale(105%);
+}
+.appointment-btn:active {
+  transform: scale(95%);
+}
+.appointment-btn img {
+  position: absolute;
+}
+.appointment-btn span {
+  mask-image: url("../images/appointment-btn/white/arrow.svg");
+  width: 1.3125rem;
+  height: 0.625rem;
+  margin-left: 17%;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  background-color: #fff;
+}
+.appointment-btn button {
+  margin-left: 1rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30.48px;
+  letter-spacing: 0.05em;
 }
 
 /*# sourceMappingURL=styles.css.map */
