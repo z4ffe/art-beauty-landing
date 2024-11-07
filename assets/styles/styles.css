@@ -33,6 +33,7 @@ body {
   padding: 0 16.25rem;
   background-image: url("../images/header-bg.png");
   width: 100%;
+  overflow: hidden;
 }
 .header .header__wrapper .nav {
   display: flex;
