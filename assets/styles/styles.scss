@@ -421,19 +421,19 @@ body {
   width: 100%;
   background-color: #F0E3DA;
 
-  .clients-wrapper {
+  .clients__wrapper {
     display: flex;
     flex-direction: column;
     margin: rem(110) rem(258);
     width: 100%;
     overflow: hidden;
 
-    .clients-header {
+    .clients__header {
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      .clients-title {
+      .clients__title {
         display: flex;
         flex-direction: column;
 
@@ -456,7 +456,7 @@ body {
         }
       }
 
-      .clients-controls {
+      .clients__controls {
         display: flex;
         gap: rem(15);
 
@@ -476,64 +476,6 @@ body {
 
           &:active {
             transform: scale(95%);
-          }
-        }
-      }
-    }
-
-    .clients-slider {
-      display: flex;
-      margin-top: rem(74);
-      justify-content: center;
-      transition: .4s;
-
-      .client-tile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: auto;
-        max-width: rem(300);
-        height: rem(348);
-        border-left: 1px solid rgba(128, 128, 128, 0.2);
-        border-right: 1px solid rgba(128, 128, 128, 0.2);
-        padding: 0 rem(30);
-
-        .client-name {
-          font-family: Kudryashev, sans-serif;
-          text-align: center;
-          font-size: rem(20);
-          letter-spacing: rem(2);
-          color: #1D1D1A;
-        }
-
-
-        .client-photo {
-          width: rem(120);
-        }
-
-        .client-desc {
-          text-align: center;
-          line-height: rem(23);
-          font-size: rem(14);
-          color: #22211E;
-        }
-      }
-
-      .client-social {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        ul {
-          display: flex;
-          gap: rem(35);
-          list-style: none;
-          padding: 0;
-
-          li {
-            display: flex;
-            align-items: center;
           }
         }
       }
@@ -943,7 +885,51 @@ body {
   }
 
   .clients {
-    display: none;
+    padding: rem(44) 0 rem(20);
+
+    .clients__wrapper {
+      margin: 0;
+
+      .clients__header {
+        flex-direction: column;
+        position: relative;
+
+        .clients__title {
+          h2 {
+            font-size: rem(37);
+            text-align: center;
+          }
+
+          h3 {
+            font-size: rem(37);
+            text-align: center;
+          }
+        }
+
+        .clients__controls {
+          position: absolute;
+          width: 100%;
+          justify-content: space-between;
+          bottom: -150px;
+
+          button {
+            width: rem(40);
+            height: rem(40);
+            font-size: rem(25);
+            z-index: 100;
+
+            &:hover {
+              transform: scale(105%);
+              font-size: rem(25);
+            }
+
+            &:active {
+              transform: scale(95%);
+            }
+          }
+        }
+      }
+    }
   }
 
   .footer {
@@ -1023,6 +1009,16 @@ body {
       }
     }
   }
+
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .client-tile {
+    border: none !important;
+    align-self: center;
+  }
 }
 
 
@@ -1068,5 +1064,69 @@ body {
     font-weight: 600;
     line-height: 30.48px;
     letter-spacing: 0.05em;
+  }
+}
+
+/* ---------------- swiper ----------------- */
+
+.swiper {
+  width: 100%;
+  margin-top: rem(74);
+}
+
+.swiper-slide {
+  display: flex !important;
+}
+
+/* ---------------- client-tile ----------------- */
+
+.client-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: rem(300);
+  height: rem(348);
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+  padding: 0 rem(30);
+
+  .client-name {
+    font-family: Kudryashev, sans-serif;
+    text-align: center;
+    font-size: rem(20);
+    letter-spacing: rem(2);
+    color: #1D1D1A;
+  }
+
+
+  .client-photo {
+    width: rem(120);
+  }
+
+  .client-desc {
+    text-align: center;
+    line-height: rem(23);
+    font-size: rem(14);
+    color: #22211E;
+  }
+}
+
+.client-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    gap: rem(35);
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
   }
 }

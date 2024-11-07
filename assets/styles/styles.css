@@ -362,23 +362,23 @@ body {
   width: 100%;
   background-color: #F0E3DA;
 }
-.clients .clients-wrapper {
+.clients .clients__wrapper {
   display: flex;
   flex-direction: column;
   margin: 6.875rem 16.125rem;
   width: 100%;
   overflow: hidden;
 }
-.clients .clients-wrapper .clients-header {
+.clients .clients__wrapper .clients__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.clients .clients-wrapper .clients-header .clients-title {
+.clients .clients__wrapper .clients__header .clients__title {
   display: flex;
   flex-direction: column;
 }
-.clients .clients-wrapper .clients-header .clients-title h2 {
+.clients .clients__wrapper .clients__header .clients__title h2 {
   font-size: 5.3125rem;
   font-weight: 400;
   font-family: Kudryashev, sans-serif;
@@ -386,18 +386,18 @@ body {
   margin: 0;
   padding: 0;
 }
-.clients .clients-wrapper .clients-header .clients-title h3 {
+.clients .clients__wrapper .clients__header .clients__title h3 {
   font-size: 5.3125rem;
   font-weight: 400;
   font-family: Kudryashev, sans-serif;
   margin: 0;
   padding: 0;
 }
-.clients .clients-wrapper .clients-header .clients-controls {
+.clients .clients__wrapper .clients__header .clients__controls {
   display: flex;
   gap: 0.9375rem;
 }
-.clients .clients-wrapper .clients-header .clients-controls button {
+.clients .clients__wrapper .clients__header .clients__controls button {
   color: #DBBF8D;
   font-size: 3.4375rem;
   background-color: #F9F4F0;
@@ -406,61 +406,12 @@ body {
   border: none;
   transition: 0.1s;
 }
-.clients .clients-wrapper .clients-header .clients-controls button:hover {
+.clients .clients__wrapper .clients__header .clients__controls button:hover {
   transform: scale(105%);
   font-size: 3.75rem;
 }
-.clients .clients-wrapper .clients-header .clients-controls button:active {
+.clients .clients__wrapper .clients__header .clients__controls button:active {
   transform: scale(95%);
-}
-.clients .clients-wrapper .clients-slider {
-  display: flex;
-  margin-top: 4.625rem;
-  justify-content: center;
-  transition: 0.4s;
-}
-.clients .clients-wrapper .clients-slider .client-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  max-width: 18.75rem;
-  height: 21.75rem;
-  border-left: 1px solid rgba(128, 128, 128, 0.2);
-  border-right: 1px solid rgba(128, 128, 128, 0.2);
-  padding: 0 1.875rem;
-}
-.clients .clients-wrapper .clients-slider .client-tile .client-name {
-  font-family: Kudryashev, sans-serif;
-  text-align: center;
-  font-size: 1.25rem;
-  letter-spacing: 0.125rem;
-  color: #1D1D1A;
-}
-.clients .clients-wrapper .clients-slider .client-tile .client-photo {
-  width: 7.5rem;
-}
-.clients .clients-wrapper .clients-slider .client-tile .client-desc {
-  text-align: center;
-  line-height: 1.4375rem;
-  font-size: 0.875rem;
-  color: #22211E;
-}
-.clients .clients-wrapper .clients-slider .client-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.clients .clients-wrapper .clients-slider .client-social ul {
-  display: flex;
-  gap: 2.1875rem;
-  list-style: none;
-  padding: 0;
-}
-.clients .clients-wrapper .clients-slider .client-social ul li {
-  display: flex;
-  align-items: center;
 }
 
 .footer {
@@ -776,7 +727,41 @@ body {
     height: auto;
   }
   .clients {
-    display: none;
+    padding: 2.75rem 0 1.25rem;
+  }
+  .clients .clients__wrapper {
+    margin: 0;
+  }
+  .clients .clients__wrapper .clients__header {
+    flex-direction: column;
+    position: relative;
+  }
+  .clients .clients__wrapper .clients__header .clients__title h2 {
+    font-size: 2.3125rem;
+    text-align: center;
+  }
+  .clients .clients__wrapper .clients__header .clients__title h3 {
+    font-size: 2.3125rem;
+    text-align: center;
+  }
+  .clients .clients__wrapper .clients__header .clients__controls {
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    bottom: -150px;
+  }
+  .clients .clients__wrapper .clients__header .clients__controls button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5625rem;
+    z-index: 100;
+  }
+  .clients .clients__wrapper .clients__header .clients__controls button:hover {
+    transform: scale(105%);
+    font-size: 1.5625rem;
+  }
+  .clients .clients__wrapper .clients__header .clients__controls button:active {
+    transform: scale(95%);
   }
   .footer {
     background-color: #D1AE8E;
@@ -840,6 +825,14 @@ body {
     color: inherit;
     font-size: inherit;
   }
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .client-tile {
+    border: none !important;
+    align-self: center;
+  }
 }
 /* ---------------- appointment-btn ----------------- */
 .appointment-btn {
@@ -878,6 +871,62 @@ body {
   font-weight: 600;
   line-height: 30.48px;
   letter-spacing: 0.05em;
+}
+
+/* ---------------- swiper ----------------- */
+.swiper {
+  width: 100%;
+  margin-top: 4.625rem;
+}
+
+.swiper-slide {
+  display: flex !important;
+}
+
+/* ---------------- client-tile ----------------- */
+.client-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 18.75rem;
+  height: 21.75rem;
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+  padding: 0 1.875rem;
+}
+.client-tile .client-name {
+  font-family: Kudryashev, sans-serif;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0.125rem;
+  color: #1D1D1A;
+}
+.client-tile .client-photo {
+  width: 7.5rem;
+}
+.client-tile .client-desc {
+  text-align: center;
+  line-height: 1.4375rem;
+  font-size: 0.875rem;
+  color: #22211E;
+}
+
+.client-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-social ul {
+  display: flex;
+  gap: 2.1875rem;
+  list-style: none;
+  padding: 0;
+}
+.client-social ul li {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

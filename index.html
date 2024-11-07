@@ -11,6 +11,8 @@
   <link crossorigin href='https://fonts.gstatic.com' rel='preconnect'>
   <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'
         rel='stylesheet'>
+  <link href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
   <title>Art Beauty</title>
 </head>
 <body>
@@ -139,18 +141,20 @@
   </div>
 </section>
 <section class='clients'>
-  <div class='clients-wrapper'>
-    <div class='clients-header'>
-      <div class='clients-title'>
+  <div class='clients__wrapper'>
+    <div class='clients__header'>
+      <div class='clients__title'>
         <h2>Наши клиенты</h2>
         <h3>всегда в восторге</h3>
       </div>
-      <div class='clients-controls'>
-        <button class='left-btn' data-dir='left' data-type='slider'>‹</button>
-        <button class='right-btn' data-dir='right' data-type='slider'>›</button>
+      <div class='clients__controls'>
+        <button class='client-controls__prev'>‹</button>
+        <button class='client-controls__next'>›</button>
       </div>
     </div>
-    <div class='clients-slider'></div>
+    <div class='swiper'>
+      <div class='swiper-wrapper'></div>
+    </div>
   </div>
 </section>
 <footer class='footer'>
@@ -214,7 +218,7 @@
     <span class='footer__politics'>Политика конфиденциальности</span>
   </div>
 </footer>
-<script src='./assets/scripts/clients-coursel.js' type='module'></script>
-<script src='./assets/scripts/form-procedure.js' type='module'></script>
+<script src='assets/scripts/swiperClientsConfig.js' type='module'></script>
+<script src='assets/scripts/formProcedure.js' type='module'></script>
 </body>
 </html>
