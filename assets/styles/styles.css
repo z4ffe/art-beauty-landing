@@ -7,6 +7,9 @@
 * {
   font-family: Montserrat, sans-serif;
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -32,6 +35,7 @@ body {
   flex-direction: column;
   padding: 0 16.25rem;
   background-image: url("../images/header-bg.png");
+  background-size: cover;
   width: 100%;
   overflow: hidden;
 }
@@ -356,6 +360,123 @@ body {
   left: 4.375rem;
   width: 20rem;
   height: auto;
+}
+
+.example {
+  width: 100%;
+  position: relative;
+}
+.example .example__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 6.875rem 12.5rem 0;
+}
+.example .example__wrapper .example__title {
+  width: 100%;
+}
+.example .example__wrapper .example__title h1 {
+  font-size: 5.3125rem;
+  font-weight: 400;
+  max-width: 50rem;
+  font-family: Kudryashev, sans-serif;
+  line-height: 76.5px;
+}
+.example .example__wrapper .example__features {
+  padding-top: 3.4375rem;
+}
+.example .example__wrapper .example__features ul {
+  display: flex;
+  list-style-type: none;
+  gap: 3.125rem;
+}
+.example .example__wrapper .example__features ul li {
+  max-width: 20rem;
+}
+.example .example__wrapper .example__features ul li h5 {
+  margin: 1.6875rem 0 0.9375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.example .example__wrapper .example__features ul li p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.example .example__wrapper .example__slider-appointment {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.example .example__wrapper .example__slider-appointment .example__slider {
+  display: flex;
+  justify-content: center;
+  margin-top: 6.25rem;
+  position: relative;
+  z-index: 100;
+}
+.example .example__wrapper .example__slider-appointment .example__slider img-comparison-slider:focus {
+  outline: none;
+}
+.example .example__wrapper .example__slider-appointment .example__slider img-comparison-slider img:not(:last-child) {
+  width: 28.125rem;
+}
+.example .example__wrapper .example__slider-appointment .example__slider .example__slider-after {
+  position: absolute;
+  left: calc(50% - 200px);
+  bottom: 1.25rem;
+  z-index: 100;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 7.5rem;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment h2 {
+  margin-left: 4rem;
+  font-family: Kudryashev, sans-serif;
+  font-size: 5.3125rem;
+  color: #B68C6E;
+  font-weight: 400;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment h3 {
+  margin-left: 10rem;
+  font-family: Kudryashev, sans-serif;
+  font-size: 7.5rem;
+  font-weight: 400;
+  line-height: 93.25px;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment p {
+  max-width: 22.5rem;
+  margin-left: 10rem;
+  margin-top: 3.125rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 36.9px;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment p span {
+  color: #B78C6E;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment .appointment-btn {
+  margin-left: 5rem;
+  z-index: 100;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment .appointment-btn span {
+  mask-image: url("../images/appointment-btn/dust/arrow.svg");
+  background-color: #B78C6E;
+}
+.example .example__wrapper .example__slider-appointment .example__appointment .appointment-btn button {
+  color: black;
+}
+.example .example__line {
+  position: absolute;
+  top: 0;
+  right: 12%;
+}
+.example .example__background-dots {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 500px);
 }
 
 .clients {
@@ -727,6 +848,60 @@ body {
     width: 11.25rem;
     height: auto;
   }
+  .example .example__wrapper {
+    padding: 3.125rem 0rem;
+  }
+  .example .example__wrapper .example__title {
+    padding: 0 0.875rem;
+  }
+  .example .example__wrapper .example__title h1 {
+    font-size: 2.3125rem;
+    line-height: 40px;
+  }
+  .example .example__wrapper .example__features {
+    padding: 2.125rem 0.875rem 0;
+  }
+  .example .example__wrapper .example__features ul {
+    flex-direction: column;
+  }
+  .example .example__wrapper .example__features ul li h5 {
+    margin: 0.875rem 0 0.625rem;
+  }
+  .example .example__wrapper .example__slider-appointment {
+    flex-direction: column-reverse;
+  }
+  .example .example__wrapper .example__slider-appointment .example__appointment {
+    padding: 6.625rem 0.875rem 0;
+  }
+  .example .example__wrapper .example__slider-appointment .example__appointment h2 {
+    font-size: 2.3125rem;
+    margin-left: 0;
+    line-height: 40.59px;
+  }
+  .example .example__wrapper .example__slider-appointment .example__appointment h3 {
+    font-size: 2.3125rem;
+    margin-left: 0;
+    line-height: 40.59px;
+  }
+  .example .example__wrapper .example__slider-appointment .example__appointment p {
+    font-size: 1.125rem;
+    margin-left: 0;
+    max-width: 80%;
+    line-height: 25px;
+    text-wrap: wrap;
+  }
+  .example .example__wrapper .example__slider-appointment .example__appointment .appointment-btn {
+    display: none;
+  }
+  .example .example__background-dots {
+    position: absolute;
+    bottom: 500px;
+    right: 10%;
+    width: 70%;
+  }
+  .example .example__line {
+    right: 0;
+  }
   .clients {
     padding: 2.75rem 0 1.25rem;
   }
@@ -844,6 +1019,9 @@ body {
     margin-left: auto !important;
     padding-left: 0 !important;
   }
+  .example .example__wrapper {
+    padding: 6.875rem 3.125rem 0;
+  }
   .clients .clients__wrapper {
     margin: 6.875rem 3.125rem !important;
   }
@@ -942,6 +1120,7 @@ body {
 
 .swiper-slide {
   display: flex !important;
+  justify-content: center;
 }
 
 .swiper-button-disabled {
@@ -961,17 +1140,25 @@ body {
   border-right: 1px solid rgba(128, 128, 128, 0.2);
   padding: 0 1.875rem;
 }
+.client-tile:first-child {
+  border-left: none;
+}
+.client-tile:last-child {
+  border-right: none;
+}
+.client-tile .client-photo {
+  width: 7.5rem;
+}
 .client-tile .client-name {
+  margin-top: 1.9375rem;
   font-family: Kudryashev, sans-serif;
   text-align: center;
   font-size: 1.25rem;
   letter-spacing: 0.125rem;
   color: #1D1D1A;
 }
-.client-tile .client-photo {
-  width: 7.5rem;
-}
 .client-tile .client-desc {
+  margin-top: 0.625rem;
   text-align: center;
   line-height: 1.4375rem;
   font-size: 0.875rem;
@@ -982,6 +1169,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1.875rem;
 }
 .client-social ul {
   display: flex;
@@ -993,5 +1181,7 @@ body {
   display: flex;
   align-items: center;
 }
+
+/* ---------------- comparison-slider ----------------- */
 
 /*# sourceMappingURL=styles.css.map */
