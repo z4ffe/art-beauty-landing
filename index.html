@@ -13,6 +13,8 @@
         rel='stylesheet'>
   <link href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' rel='stylesheet' />
   <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+  <script defer src='https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js'></script>
+  <link href='https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css' rel='stylesheet' />
   <title>Art Beauty</title>
 </head>
 <body>
@@ -140,7 +142,14 @@
 </section>
 <section class='example'>
   <div class='example__wrapper'>
-
+    <div class='example__title'></div>
+    <div class='example__features'></div>
+    <div class='example__slider'>
+      <img-comparison-slider>
+        <img alt='before' slot='first' src='assets/images/example/before.png' />
+        <img alt='after' slot='second' src='assets/images/example/after.png' />
+      </img-comparison-slider>
+    </div>
   </div>
 </section>
 <section class='clients'>
