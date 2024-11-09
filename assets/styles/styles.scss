@@ -36,6 +36,7 @@ body {
     padding: 0 rem(260);
     background-image: url('../images/header-bg.png');
     background-size: cover;
+    background-position: center center;
     width: 100%;
     overflow: hidden;
 
@@ -59,7 +60,7 @@ body {
 
         .nav_address {
           font-size: 14px;
-          width: 242px;
+          max-width: 242px;
           color: #fff;
           line-height: 21.76px;
           font-weight: 500;
@@ -71,6 +72,13 @@ body {
         gap: rem(36);
         padding-left: rem(225);
         z-index: 10;
+
+        a {
+
+          &:hover {
+            animation: ringShake 2s ease 0s 1 normal forwards;
+          }
+        }
       }
 
       .nav__phone {
@@ -89,6 +97,12 @@ body {
           font-weight: 700;
           line-height: 26.4px;
           letter-spacing: 0.05em;
+          transition: .3s;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(3px) scale(102%);
+          }
         }
 
         .nav__desc {
@@ -97,6 +111,13 @@ body {
           font-size: 12px;
           font-weight: 700;
           line-height: 14.63px;
+          border-bottom: 2px solid #D5B7A0;
+          cursor: pointer;
+          transition: border-bottom-color .5s;
+
+          &:hover {
+            border-bottom: 2px solid #fff;
+          }
         }
       }
     }
@@ -408,6 +429,7 @@ body {
     background-image: url("../images/procedure-promo.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 50%;
 
     img {
@@ -672,7 +694,7 @@ body {
         display: flex;
         flex-direction: column;
         list-style: none;
-        padding: 0;
+        padding-top: rem(10);
         gap: rem(17);
 
         li {
@@ -690,6 +712,7 @@ body {
       flex-direction: column;
       margin-left: rem(160);
       margin-top: rem(97);
+      gap: rem(10);
 
       h3 {
         color: #fff;
@@ -701,19 +724,21 @@ body {
       .footer__address {
         display: flex;
         flex-direction: column;
+        gap: rem(5);
 
         span {
           color: #FFFFFF;
         }
 
         a {
-          padding-top: rem(10);
           color: #FFFFFF;
           text-decoration: underline;
         }
       }
 
       .footer__mail {
+        padding-top: rem(18);
+
         h4 {
           font-size: rem(12);
           color: #ffffff;
@@ -722,10 +747,14 @@ body {
 
         a {
           color: #ffffff;
+          padding-top: rem(10);
+          display: block;
         }
       }
 
       .footer__socials {
+        padding-top: rem(18);
+
         h4 {
           font-size: rem(12);
           color: #ffffff;
@@ -735,8 +764,8 @@ body {
         ul {
           display: flex;
           list-style-type: none;
-          padding: 0;
           gap: rem(15);
+          padding-top: rem(10);
         }
       }
     }
@@ -798,6 +827,7 @@ body {
     .footer__politics {
       cursor: pointer;
       text-decoration: underline;
+      color: #DCD5CE;
     }
   }
 }
@@ -1061,6 +1091,23 @@ body {
       .example__slider-appointment {
         flex-direction: column-reverse;
 
+        .example__slider {
+
+          img-comparison-slider {
+            width: 100%;
+
+            img:not(:last-child) {
+              width: 100% !important;
+              height: auto;
+            }
+          }
+
+          .example__slider-after {
+            left: 0;
+            bottom: rem(-20);
+          }
+        }
+
         .example__appointment {
           padding: rem(106) rem(14) 0;
 
@@ -1225,6 +1272,7 @@ body {
       .footer__politics {
         color: inherit;
         font-size: inherit;
+        text-decoration: none;
       }
     }
   }
@@ -1355,13 +1403,14 @@ body {
   width: rem(345);
   height: rem(160);
   transition: transform .5s;
+  cursor: pointer;
 
   &:hover {
     transform: scale(105%);
   }
 
   &:active {
-    transform: scale(95%);
+    transform: scale(98%);
   }
 
   img {
@@ -1388,6 +1437,7 @@ body {
     font-weight: 600;
     line-height: 30.48px;
     letter-spacing: 0.05em;
+    cursor: pointer;
   }
 }
 
@@ -1471,4 +1521,36 @@ body {
   }
 }
 
-/* ---------------- comparison-slider ----------------- */
+/* ---------------- animation ----------------- */
+
+@keyframes ringShake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}
