@@ -44,9 +44,9 @@
       </div>
       <div class='nav__phone'>
         <a class='nav__number' href='tel:0000'>+7 (921) 967-61-88</a>
-        <span class='nav__desc'>
+        <button class='nav__desc callback'>
           ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-        </span>
+        </button>
       </div>
     </nav>
     <main class='main'>
@@ -57,7 +57,7 @@
       <p class='main__desc'>
         Позвольте себе выглядеть моложе на <span>5 лет</span>
       </p>
-      <div class='appointment-btn'>
+      <div class='appointment-btn callback'>
         <img alt='' src='assets/images/appointment-btn/white/circle1.svg'>
         <img alt='' src='assets/images/appointment-btn/white/circle2.svg'>
         <span></span>
@@ -108,7 +108,7 @@
         </li>
       </ul>
     </div>
-    <div class='appointment-btn'>
+    <div class='appointment-btn callback'>
       <img alt='' src='assets/images/appointment-btn/dust/circle1.svg'>
       <img alt='' src='assets/images/appointment-btn/dust/circle2.svg'>
       <span></span>
@@ -161,7 +161,7 @@
         <h2>Примеры</h2>
         <h3>работ </h3>
         <p>Устойчивый результат, гладкая кожа от <span>4х до 5 лет</span></p>
-        <div class='appointment-btn'>
+        <div class='appointment-btn callback'>
           <img alt='' src='assets/images/appointment-btn/dust/circle1.svg'>
           <img alt='' src='assets/images/appointment-btn/dust/circle2.svg'>
           <span></span>
@@ -265,7 +265,7 @@
       <a href='tel:+78129676188'>
         <span class='tel-two'>+7 (812) 967-61-88</span>
       </a>
-      <a class='footer__callback' href='#'>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</a>
+      <button class='footer__callback callback'>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
     </div>
   </div>
   <div class='footer__copyright'>
@@ -273,7 +273,25 @@
     <a class='footer__politics' href='#'>Политика конфиденциальности</a>
   </div>
 </footer>
+<div class='modal'>
+  <div class='modal__wrapper'>
+    <div class='modal__header'>
+      <h1 class='modal__title'>Запись на прием</h1>
+      <button class='close__modal' id='close-modal'>&#10005;</button>
+    </div>
+    <form class='appointment-form' id='appointment-form'>
+      <label for='promo-name'>
+        <input id='appointment-name' name='promo-name' placeholder='ВАШЕ ИМЯ' type='text'>
+      </label>
+      <label for='promo-tel'>
+        <input id='appointment-tel' name='promo-tel' placeholder='ВАШЕ ТЕЛЕФОН' type='tel'>
+      </label>
+      <button class='submit-btn' type='submit'>записаться со скидкой</button>
+    </form>
+  </div>
+</div>
 <script src='assets/scripts/swiperClientsConfig.js' type='module'></script>
-<script src='assets/scripts/formProcedure.js' type='module'></script>
+<script src='assets/scripts/forms.js' type='module'></script>
+<script src='assets/scripts/modal.js' type='module'></script>
 </body>
 </html>
