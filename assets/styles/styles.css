@@ -174,6 +174,9 @@ body {
   border-radius: 50%;
   background-color: #fff;
 }
+.header .header__wrapper .sidebar-btn {
+  display: none;
+}
 
 .problems {
   display: flex;
@@ -819,6 +822,10 @@ body {
   transform: scale(95%);
 }
 
+.sidenav {
+  display: none;
+}
+
 /* ---------------- MEDIA-QUERY 430px ----------------- */
 @media only screen and (max-width: 430px) {
   .header {
@@ -886,6 +893,21 @@ body {
   }
   .header .header__wrapper .header__background .header__background-img {
     display: none;
+  }
+  .header .header__wrapper .sidebar-btn {
+    position: absolute;
+    display: block;
+    top: 1.25rem;
+    right: 0.9375rem;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/drawer-icon.svg");
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
   .problems {
     flex-direction: column;
@@ -1183,6 +1205,78 @@ body {
   .modal .modal__wrapper .appointment-form button {
     font-size: 0.75rem;
   }
+  .sidenav {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 211, 211, 0.75);
+    z-index: 99999;
+    transform: translateX(500px);
+    transition: transform 0.5s;
+    justify-content: end;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  .sidenav .sidenav__wrapper {
+    width: 200px;
+    height: 100%;
+    background-color: #1D1D1E;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  .sidenav .sidenav__wrapper .close__sidenav {
+    position: absolute;
+    display: block;
+    top: 0.5rem;
+    right: 0.9375rem;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+  }
+  .sidenav .sidenav__wrapper .sidenav__menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.25rem;
+  }
+  .sidenav .sidenav__wrapper .sidenav__menu h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #B78C6E;
+    padding-bottom: 0.125rem;
+  }
+  .sidenav .sidenav__wrapper .sidenav__menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-top: 0.625rem;
+    gap: 1.0625rem;
+  }
+  .sidenav .sidenav__wrapper .sidenav__menu ul li a {
+    color: #B78C6E;
+    font-weight: 500;
+  }
+  .sidenav .sidenav__wrapper .sidenav__social {
+    display: flex;
+    gap: 2.25rem;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0.625rem 1.25rem 0.3125rem;
+  }
+  .sidenav .sidenav__wrapper .sidenav__copyright {
+    display: block;
+    color: #fff;
+    margin: 0.3125rem 1.25rem;
+    padding-top: 0.625rem;
+    font-size: 0.875rem;
+    text-align: right;
+    border-top: 2px solid #B78C6E;
+  }
   .swiper-slide {
     display: flex !important;
     flex-direction: column;
@@ -1409,7 +1503,7 @@ body {
   }
 }
 /* ---------------- modal ----------------- */
-.modal-open {
+.prevent-scroll {
   overflow: hidden !important;
 }
 
