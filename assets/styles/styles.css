@@ -10,6 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: red solid 1px;
 }
 
 a {
@@ -1206,7 +1207,7 @@ body {
     font-size: 0.75rem;
   }
   .sidenav {
-    position: absolute;
+    position: fixed;
     display: flex;
     top: 0;
     right: 0;
