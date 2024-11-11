@@ -1,8 +1,0 @@
-@font-face {
-  font-family: "Kudryashev";
-  src: local("Kudryashev Headline Regular"), local("Kudryashev-Headline-Regular"), url("../fonts/KudryashevHeadline-Regular.woff2") format("woff2"), url("../fonts/KudryashevHeadline-Regular.woff") format("woff"), url("../fonts/KudryashevHeadline-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-/*# sourceMappingURL=fonts.css.map */
