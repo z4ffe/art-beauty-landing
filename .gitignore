@@ -103,7 +103,6 @@ node_modules
 .env
 *.log
 build
-dist
 */node_modules
 ### PL template
 # User-specific stuff
