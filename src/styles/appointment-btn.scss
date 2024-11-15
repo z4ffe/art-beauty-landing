@@ -1,0 +1,44 @@
+.appointment-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: toRem(345);
+  height: toRem(160);
+  transition: transform .5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(105%);
+  }
+
+  &:active {
+    transform: scale(98%);
+  }
+
+  img {
+    position: absolute;
+  }
+
+  span {
+    mask-image: url('/images/appointment-btn/white/arrow.svg');
+    width: toRem(21);
+    height: toRem(10);
+    margin-left: 17%;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    background-color: #fff;
+  }
+
+  button {
+    margin-left: toRem(16);
+    color: #fff;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30.48px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+  }
+}

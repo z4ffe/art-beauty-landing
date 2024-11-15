@@ -1,0 +1,13 @@
+.swiper {
+  width: 100%;
+  margin-top: toRem(74);
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+}

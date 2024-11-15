@@ -1,0 +1,311 @@
+.header {
+  display: flex;
+  width: 100%;
+
+  .header__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 toRem(260);
+    background-image: url('/images/header-bg.png');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    overflow: hidden;
+
+    .nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      .nav__info {
+        display: flex;
+        gap: toRem(34);
+        padding-left: toRem(26);
+
+        .nav__about {
+          font-size: 14px;
+          width: toRem(173);
+          color: #fff;
+          line-height: 21.76px;
+          font-weight: 500;
+        }
+
+        .nav_address {
+          font-size: 14px;
+          max-width: 242px;
+          color: #fff;
+          line-height: 21.76px;
+          font-weight: 500;
+        }
+      }
+
+      .nav__social {
+        display: flex;
+        gap: toRem(36);
+        padding-left: toRem(225);
+        z-index: 10;
+
+        a {
+
+          &:hover {
+            animation: ringShake 2s ease 0s 1 normal forwards;
+          }
+        }
+      }
+
+      .nav__phone {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        margin-left: 40px;
+        gap: toRem(13);
+        z-index: 10;
+
+        .nav__number {
+          display: flex;
+          color: #fff;
+          font-family: Kudryashev, sans-serif;
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 26.4px;
+          letter-spacing: 0.05em;
+          transition: .3s;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(3px) scale(102%);
+          }
+        }
+
+        .nav__desc {
+          display: block;
+          color: #fff;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 14.63px;
+          background-color: transparent;
+          border: none;
+          border-bottom: 2px solid #D5B7A0;
+          cursor: pointer;
+          transition: border-bottom-color .5s;
+
+          &:hover {
+            border-bottom: 2px solid #fff;
+          }
+        }
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+
+
+      .main__title {
+        display: flex;
+        flex-direction: column;
+        padding: toRem(68) 0 0 0;
+        max-width: toRem(581);
+
+        h1 {
+          font-family: Kudryashev, sans-serif;
+          font-size: toRem(80);
+          max-width: toRem(580);
+          color: #fff;
+          font-weight: 200;
+          margin: 0;
+          text-transform: uppercase;
+        }
+
+        span {
+          font-family: Kudryashev, sans-serif;
+          margin: 0;
+          color: #fff;
+          display: block;
+          font-size: toRem(60);
+          text-transform: uppercase;
+        }
+      }
+
+      .main__desc {
+        color: #fff;
+        font-size: toRem(23);
+        max-width: toRem(378);
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .appointment-btn {
+        margin: toRem(50) 0 toRem(100);
+      }
+    }
+
+    .header__background {
+      position: absolute;
+      display: block;
+      top: toRem(-50);
+      right: toRem(300);
+      background-image: url('/images/bg-dots.svg');
+      width: toRem(546);
+      height: toRem(546);
+
+      .header__background-text {
+        position: absolute;
+        bottom: 0;
+        right: 16%;
+        width: toRem(223);
+        height: toRem(209);
+      }
+
+      .header__background-img {
+        position: absolute;
+        bottom: 16%;
+        right: 36%;
+        display: block;
+        width: toRem(12);
+        height: toRem(12);
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+
+    .sidebar-btn {
+      display: none;
+    }
+  }
+}
+
+//// -----
+
+@media only screen and (max-width: 430px) {
+  .header {
+    max-height: toRem(949);
+
+    .header__wrapper {
+      padding: 0 toRem(25);
+      background-image: url('/images/mobile-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .nav {
+        .nav__logo {
+          margin-top: toRem(11);
+
+          a {
+            img {
+              width: toRem(175);
+            }
+          }
+        }
+
+        .nav__info {
+          display: none;
+        }
+
+        .nav__social {
+          display: none;
+        }
+
+        .nav__phone {
+          display: none;
+        }
+      }
+
+      .main {
+        height: 100%;
+
+        .main__title {
+          h1 {
+            font-size: toRem(30);
+            line-height: 50px;
+          }
+
+          span {
+            font-size: toRem(30);
+            line-height: 50px;
+            width: toRem(240);
+          }
+        }
+
+        .main__desc {
+          font-size: toRem(12);
+          width: 166px;
+          line-height: toRem(20);
+        }
+
+        .appointment-btn {
+          margin: 0;
+          width: auto;
+
+          img {
+            width: 110px;
+          }
+
+          span {
+            margin-left: 12%;
+          }
+
+          button {
+            font-size: toRem(16);
+          }
+        }
+
+      }
+
+      .header__background {
+        top: 2%;
+        left: 40%;
+        background-size: 50%;
+        background-repeat: no-repeat;
+
+        .header__background-text {
+          display: none;
+        }
+
+        .header__background-img {
+          display: none;
+        }
+      }
+
+      .sidebar-btn {
+        position: absolute;
+        display: block;
+        top: toRem(20);
+        right: toRem(15);
+        width: 40px;
+        height: 40px;
+        background-image: url('/images/drawer-icon.svg');
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+//// ----
+
+@media only screen and (min-width: 431px) and (max-width: 1650px) {
+  .header {
+    .header__wrapper {
+      padding: 0 toRem(100);
+
+      nav {
+        .nav__social {
+          margin-left: auto !important;
+          padding-left: 0 !important;
+        }
+      }
+    }
+
+    .header__background {
+      right: 0 !important;
+    }
+  }
+}

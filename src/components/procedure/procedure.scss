@@ -1,0 +1,168 @@
+.procedure {
+  display: flex;
+  width: 100%;
+
+  .procedure__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #1D1D1A;
+    padding: toRem(165) 0;
+
+    .procedure__title {
+      display: flex;
+      flex-direction: column;
+      max-width: toRem(521);
+
+      h2 {
+        font-weight: 400;
+        font-family: Kudryashev, sans-serif;
+        color: #B68C6E;
+        font-size: toRem(50);
+        text-align: center;
+        margin: 0;
+      }
+
+      h3 {
+        color: #FFFFFF;
+        text-align: center;
+        line-height: toRem(36);
+        font-weight: 400;
+        font-size: toRem(18);
+        margin-top: toRem(22);
+      }
+    }
+
+    .procedure__form {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(22);
+      margin-top: toRem(22);
+      width: 55%;
+
+      label {
+        display: flex;
+        width: 100%;
+
+        input {
+          padding: 0 toRem(40);
+          width: 100%;
+          height: toRem(93);
+          background-color: transparent;
+          border: 2px solid #B68C6E;
+          color: #FFFFFF;
+          font-size: toRem(25);
+
+          &::placeholder {
+            color: #504339;
+            transition: .3s;
+          }
+
+          &:hover::placeholder {
+            color: #FFFFFF;
+            padding-left: 5%;
+          }
+        }
+      }
+
+      button {
+        height: toRem(93);
+        width: 100%;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 2px solid #B68C6E;
+        color: #FFFFFF;
+        transition: .2s;
+
+        &:hover {
+          font-weight: 500;
+          font-size: toRem(20);
+          color: #B68C6E;
+        }
+
+        &:active {
+          font-weight: 500;
+          font-size: toRem(20);
+          color: #B68C6E;
+          transform: scale(95%);
+        }
+      }
+    }
+  }
+
+  .procedure__banner {
+    position: relative;
+    display: flex;
+    background-image: url("/images/procedure-promo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+
+    img {
+      position: absolute;
+      top: toRem(70);
+      left: toRem(70);
+      width: toRem(320);
+      height: auto;
+    }
+  }
+}
+
+/// ----
+
+@media only screen and (max-width: 430px) {
+
+  .procedure {
+    flex-direction: column-reverse;
+
+    .procedure__wrapper {
+      width: 100%;
+      padding: toRem(35) 0;
+
+      .procedure__title {
+
+        h2 {
+          margin: 0 auto;
+          font-size: toRem(35);
+          text-align: center;
+          width: 80%;
+          line-height: 50px;
+          font-weight: 400;
+          letter-spacing: 4px;
+        }
+
+        h3 {
+          text-align: center;
+          font-size: toRem(14);
+          text-transform: uppercase;
+          padding: 0 toRem(15);
+        }
+      }
+    }
+
+    .procedure__form {
+      width: 90% !important;
+      align-items: center;
+    }
+
+
+    .procedure__banner {
+      width: 100%;
+      height: 600px;
+      position: relative;
+      background-image: url("/images/procedure-promo-mobile.png");
+      background-size: cover;
+
+      img {
+        position: absolute;
+        top: toRem(26);
+        left: toRem(20);
+        width: toRem(180);
+        height: auto;
+      }
+    }
+  }
+}

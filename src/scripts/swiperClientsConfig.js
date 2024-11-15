@@ -12,12 +12,12 @@ const clientTileTemplate = (name, photo, desc) => `<div class='client-tile'>
         <ul>
           <li>
             <a href='https://vk.com'>
-            	<img src='assets/images/clients/social/client-vk.svg' alt='VK'>
+            	<img src='/images/clients/social/client-vk.svg' alt='VK'>
 				</a>
           </li>
           <li>
            <a href='https://vk.com'>
-            	<img src='assets/images/clients/social/client-instagram.svg' alt='Instagram'>
+            	<img src='/images/clients/social/client-instagram.svg' alt='Instagram'>
 				</a>
           </li>
         </ul>
