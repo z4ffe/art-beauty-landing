@@ -235,3 +235,11 @@
     }
   }
 }
+
+@media only screen and (min-width: 431px) and (max-width: 1440px) {
+  .example {
+    .example__wrapper {
+      padding: toRem(110) toRem(50) 0;
+    }
+  }
+}

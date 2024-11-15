@@ -181,3 +181,32 @@
     }
   }
 }
+
+//---
+
+@media only screen and (max-width: 430px) {
+  .client-tile {
+    border: none !important;
+    align-self: center;
+  }
+}
+
+// ---
+
+@media only screen and (min-width: 431px) and (max-width: 1440px) {
+  .clients {
+    .clients__wrapper {
+      margin: toRem(110) toRem(50) !important;
+    }
+  }
+}
+
+//---
+
+@media only screen and (min-width: 431px) and (max-width: 1650px) {
+  .clients {
+    .clients__wrapper {
+      margin: toRem(110) toRem(150);
+    }
+  }
+}

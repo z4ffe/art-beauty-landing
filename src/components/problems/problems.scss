@@ -214,3 +214,23 @@
     }
   }
 }
+
+///-----
+
+@media only screen and (min-width: 431px) and (max-width: 1650px) {
+  .problems {
+    .problems__banner {
+      .problems__banner-img {
+        margin: toRem(93) 0 toRem(232) toRem(50);
+      }
+
+      .problems__banner-text {
+        left: toRem(50);
+      }
+
+      .problems__banner-rectangle {
+        left: 0;
+      }
+    }
+  }
+}

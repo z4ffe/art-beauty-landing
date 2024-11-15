@@ -309,3 +309,18 @@
     }
   }
 }
+
+@media only screen and (min-width: 431px) and (max-width: 1440px) {
+  .header {
+    .header__wrapper {
+      padding: 0 toRem(25) !important;
+
+      .nav {
+        .nav__social {
+          margin-left: auto !important;
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+}

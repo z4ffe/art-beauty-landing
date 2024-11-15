@@ -11,3 +11,12 @@
 .swiper-button-disabled {
   opacity: 0;
 }
+
+/// ---
+
+@media only screen and (max-width: 430px) {
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
