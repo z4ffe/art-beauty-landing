@@ -1,9 +1,10 @@
-const {dest, src, watch, parallel} = require('gulp')
+const {dest, src, watch, parallel, series} = require('gulp')
 const scss = require('gulp-sass')(require('sass'))
 const gulpConcat = require('gulp-concat')
 const browserSync = require('browser-sync').create()
 const fileInclude = require('gulp-file-include')
 const terser = require('gulp-terser')
+const gulpClean = require('gulp-clean')
 
 function scripts() {
 	return src('./src/**/*.js')
@@ -34,6 +35,22 @@ function fileIncludeTask() {
 		.pipe(browserSync.stream())
 }
 
+function cleanDir() {
+	return src('dist')
+		.pipe(gulpClean())
+
+}
+
+function prodBuild() {
+	return src(['./src/index.html', './src/styles/style.min.css', './src/scripts/main.min.js'])
+		.pipe(dest('dist'))
+}
+
+function prodImages() {
+	return src(['./src/images/**/*.*'])
+		.pipe(dest('dist/images'))
+}
+
 function liveServer() {
 	browserSync.init({
 		server: {
@@ -49,10 +66,13 @@ function run() {
 	watch(['./src/**/*.html']).on('change', browserSync.reload)
 }
 
+//
+
 exports.styles = styles
 exports.scripts = scripts
 exports.run = run
 exports.liveServer = liveServer
 exports.fileIncludeTask = fileIncludeTask
 
+exports.prod = series(cleanDir, prodBuild, prodImages)
 exports.default = parallel(styles, scripts, fileIncludeTask, run, liveServer)
